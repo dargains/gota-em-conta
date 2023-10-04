@@ -16,14 +16,14 @@ const defaultMapProps = {
 
 const MapItem = ({lat, lng, text}) => {
   return (
-    <MarkerF position={{lat, lng}} label={text} />
+    <MarkerF position={{lat, lng}} label={text} icon={"https://upload.wikimedia.org/wikipedia/commons/8/88/Map_marker.svg"}/>
     // <div position={{lat, lng}} label={text}>{text}</div>
   )
 }
 
 function Map({items}) {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyAcMrGLpT5OAMiZHeXfWHWixU-Ds2p7Izw"
+    googleMapsApiKey: process.env.MAPS_API_KEY
   })
 
   const [map, setMap] = React.useState(null)
