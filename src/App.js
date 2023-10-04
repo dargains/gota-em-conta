@@ -72,24 +72,28 @@ function App() {
 
   return (
     <div className="App">
-      
+
       <section>
         <select name="fuelTypes" id="fuelTypes" onChange={selectItem}>
+          <option value="">Qualquer um</option>
           {
             fuelTypes.map(item => <option key={item.Id} value={item.Id}>{item.Descritivo}</option>)
           }
         </select>
         <select name="brands" id="brands" onChange={selectItem}>
+          <option value="">Qualquer um</option>
           {
             brands.map(item => <option key={item.Id} value={item.Id}>{item.Descritivo}</option>)
           }
         </select>
         <select name="districts" id="districts" onChange={selectItem}>
+          <option value="">Qualquer um</option>
           {
             districts.map(item => <option key={item.Id} value={item.Id}>{item.Descritivo}</option>)
           }
         </select>
         <select name="cities" id="cities" onChange={selectItem}>
+          <option value="">Qualquer um</option>
           {
             cities.map(item => <option key={item.Id} value={item.Id}>{item.Descritivo}</option>)
           }
