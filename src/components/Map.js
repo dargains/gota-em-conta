@@ -1,5 +1,6 @@
 import React from 'react'
 import { GoogleMap, useLoadScript, MarkerF } from '@react-google-maps/api';
+import icon from '../assets/icons/icon.svg'
 
 const containerStyle = {
   width: '100%',
@@ -16,8 +17,7 @@ const defaultMapProps = {
 
 const MapItem = ({lat, lng, text}) => {
   return (
-    <MarkerF position={{lat, lng}} label={text} icon={"https://upload.wikimedia.org/wikipedia/commons/8/88/Map_marker.svg"}/>
-    // <div position={{lat, lng}} label={text}>{text}</div>
+    <MarkerF position={{lat, lng}} label={text} icon={icon}/>
   )
 }
 
