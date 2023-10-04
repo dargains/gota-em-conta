@@ -40,12 +40,14 @@ function App() {
   }, [])
   
   const selectItem = ({target:{name, value}}) => {
+    const isDistrict = name === 'districts'
     setCurrentSelection({
       ...currentSelection,
       [name]: value,
+      ...(isDistrict && {cities: ''})
     })
     
-    if (name === 'districts') {
+    if (isDistrict) {
       axios.get(`/GetMunicipios?idDistrito=${value}`)
       .then(({data:{resultado}}) => {
         setCities(resultado.sort(alpha))
@@ -54,7 +56,7 @@ function App() {
   }
 
   const makeQuery = () => {
-    const url = `/PesquisarPostos?idsTiposComb=${currentSelection.fuelTypes}&idMarca=${currentSelection.brands}&idTipoPosto=&idDistrito=${currentSelection.districts}&idsMunicipios=${currentSelection.cities}&qtdPorPagina=500&pagina=1`
+    const url = `/PesquisarPostos?idsTiposComb=${currentSelection.fuelTypes}&idMarca=${currentSelection.brands}&idTipoPosto=&idDistrito=${currentSelection.districts}&idsMunicipios=${currentSelection.cities}&qtdPorPagina=500`
     axios.get(url).then(({data}) => {
       if (data.status) {
         const uniqueResults = data.resultado.reduce((accumulator, current) => {
