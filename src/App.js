@@ -7,14 +7,18 @@ axios.defaults.baseURL = 'https://precoscombustiveis.dgeg.gov.pt/api/PrecoComb'
 
 const initialSelection = {
   fuelTypes: '3201',
-  brand: '',
+  brands: '',
+  districts: '',
+  cities: ''
 }
 
-const removeDuplicates = (arr) => arr.filter((item, index) => arr.indexOf(item) === index);
+const alpha = (a, b) => a.Descritivo.localeCompare(b.Descritivo)
 
 function App() {
   const [fuelTypes, setFuelTypes] = useState([])
   const [brands, setBrands] = useState([])
+  const [districts, setDistricts] = useState([])
+  const [cities, setCities] = useState([])
   const [currentSelection, setCurrentSelection] = useState(initialSelection)
 
   const [results, setResults] = useState([])
@@ -29,6 +33,10 @@ function App() {
     .then(({data:{resultado}}) => {
       setBrands(resultado)
     })
+    axios.get('/GetDistritos')
+    .then(({data:{resultado}}) => {
+      setDistricts(resultado)
+    })
   }, [])
   
   const selectItem = ({target:{name, value}}) => {
@@ -36,10 +44,17 @@ function App() {
       ...currentSelection,
       [name]: value,
     })
+    
+    if (name === 'districts') {
+      axios.get(`/GetMunicipios?idDistrito=${value}`)
+      .then(({data:{resultado}}) => {
+        setCities(resultado.sort(alpha))
+      })
+    }
   }
 
   const makeQuery = () => {
-    const url = `/PesquisarPostos?idsTiposComb=${currentSelection.fuelTypes}&idMarca=${currentSelection.brand}&idTipoPosto=&idDistrito=11&idsMunicipios=161&qtdPorPagina=500&pagina=1`
+    const url = `/PesquisarPostos?idsTiposComb=${currentSelection.fuelTypes}&idMarca=${currentSelection.brands}&idTipoPosto=&idDistrito=${currentSelection.districts}&idsMunicipios=${currentSelection.cities}&qtdPorPagina=500&pagina=1`
     axios.get(url).then(({data}) => {
       if (data.status) {
         const uniqueResults = data.resultado.reduce((accumulator, current) => {
@@ -57,23 +72,39 @@ function App() {
 
   return (
     <div className="App">
-      <select name="fuelTypes" id="fuelTypes" onChange={selectItem}>
+      
+      <section>
+        <select name="fuelTypes" id="fuelTypes" onChange={selectItem}>
+          {
+            fuelTypes.map(item => <option key={item.Id} value={item.Id}>{item.Descritivo}</option>)
+          }
+        </select>
+        <select name="brands" id="brands" onChange={selectItem}>
+          {
+            brands.map(item => <option key={item.Id} value={item.Id}>{item.Descritivo}</option>)
+          }
+        </select>
+        <select name="districts" id="districts" onChange={selectItem}>
+          {
+            districts.map(item => <option key={item.Id} value={item.Id}>{item.Descritivo}</option>)
+          }
+        </select>
+        <select name="cities" id="cities" onChange={selectItem}>
+          {
+            cities.map(item => <option key={item.Id} value={item.Id}>{item.Descritivo}</option>)
+          }
+        </select>
+        <button onClick={makeQuery}>procurar</button>
+      </section>
+
+      <section>
         {
-          fuelTypes.map(item => <option key={item.Id} value={item.Id}>{item.Descritivo}</option>)
+          results.length > 0
+          ? <Map items={results} />
+          : <p>{message}</p>
         }
-      </select>
-      <select name="brand" id="brands" onChange={selectItem}>
-        {
-          brands.map(item => <option key={item.Id} value={item.Id}>{item.Descritivo}</option>)
-        }
-      </select>
-      <p>{JSON.stringify(currentSelection)}</p>
-      <button onClick={makeQuery}>procurar</button>
-      {
-        results.length > 0
-        ? <Map items={results} />
-        : <p>{message}</p>
-      }
+      </section>
+
     </div>
   );
 }
