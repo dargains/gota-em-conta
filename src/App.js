@@ -3,6 +3,11 @@ import './App.css';
 import axios from 'axios';
 import Map from './components/Map';
 
+import fuelTypesJson from './assets/data/fuelTypes.json'
+import brandsJson from './assets/data/brands.json'
+import districtsJson from './assets/data/districts.json'
+import citiesJson from './assets/data/cities.json'
+
 axios.defaults.baseURL = 'https://precoscombustiveis.dgeg.gov.pt/api/PrecoComb'
 
 const initialSelection = {
@@ -25,18 +30,21 @@ function App() {
   const [message, setMessage] = useState('')
 
   useEffect(() => {
-    axios.get('/GetTiposCombustiveis')
-    .then(({data:{resultado}}) => {
-      setFuelTypes(resultado)
-    })
-    axios.get('/GetMarcas')
-    .then(({data:{resultado}}) => {
-      setBrands(resultado)
-    })
-    axios.get('/GetDistritos')
-    .then(({data:{resultado}}) => {
-      setDistricts(resultado)
-    })
+    setFuelTypes(fuelTypesJson)
+    setBrands(brandsJson)
+    setDistricts(districtsJson)
+    // axios.get('/GetTiposCombustiveis')
+    // .then(({data:{resultado}}) => {
+    //   setFuelTypes(resultado)
+    // })
+    // axios.get('/GetMarcas')
+    // .then(({data:{resultado}}) => {
+    //   setBrands(resultado)
+    // })
+    // axios.get('/GetDistritos')
+    // .then(({data:{resultado}}) => {
+    //   setDistricts(resultado)
+    // })
   }, [])
   
   const selectItem = ({target:{name, value}}) => {
@@ -48,10 +56,12 @@ function App() {
     })
     
     if (isDistrict) {
-      axios.get(`/GetMunicipios?idDistrito=${value}`)
-      .then(({data:{resultado}}) => {
-        setCities(resultado.sort(alpha))
-      })
+      const districtCities = citiesJson.filter(city => city.IdDistrito === parseInt(value)).sort(alpha)
+      setCities(districtCities)
+      // axios.get(`/GetMunicipios?idDistrito=${value}`)
+      // .then(({data:{resultado}}) => {
+      //   setCities(resultado.sort(alpha))
+      // })
     }
   }
 
@@ -65,9 +75,11 @@ function App() {
           }
           return accumulator;
         }, []);
+        setMessage(null)
         setResults(uniqueResults)
       } else {
         setMessage(data.mensagem)
+        setResults([])
       }
     })
   }
