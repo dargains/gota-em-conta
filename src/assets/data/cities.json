@@ -1,0 +1,2522 @@
+[
+  {
+      "Descritivo": "Vouzela",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 282
+  },
+  {
+      "Descritivo": "Vizela",
+      "IdDistrito": 3,
+      "Distrito": {
+          "Descritivo": "Braga",
+          "Id": 3
+      },
+      "Id": 49
+  },
+  {
+      "Descritivo": "Viseu",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 281
+  },
+  {
+      "Descritivo": "Vinhais",
+      "IdDistrito": 4,
+      "Distrito": {
+          "Descritivo": "Bragança",
+          "Id": 4
+      },
+      "Id": 61
+  },
+  {
+      "Descritivo": "Vimioso",
+      "IdDistrito": 4,
+      "Distrito": {
+          "Descritivo": "Bragança",
+          "Id": 4
+      },
+      "Id": 60
+  },
+  {
+      "Descritivo": "Vila Viçosa",
+      "IdDistrito": 7,
+      "Distrito": {
+          "Descritivo": "Évora",
+          "Id": 7
+      },
+      "Id": 103
+  },
+  {
+      "Descritivo": "Vila Verde",
+      "IdDistrito": 3,
+      "Distrito": {
+          "Descritivo": "Braga",
+          "Id": 3
+      },
+      "Id": 48
+  },
+  {
+      "Descritivo": "Vila Velha de Ródão",
+      "IdDistrito": 5,
+      "Distrito": {
+          "Descritivo": "Castelo Branco",
+          "Id": 5
+      },
+      "Id": 72
+  },
+  {
+      "Descritivo": "Vila Real de Santo António",
+      "IdDistrito": 8,
+      "Distrito": {
+          "Descritivo": "Faro",
+          "Id": 8
+      },
+      "Id": 119
+  },
+  {
+      "Descritivo": "Vila Real",
+      "IdDistrito": 17,
+      "Distrito": {
+          "Descritivo": "Vila Real",
+          "Id": 17
+      },
+      "Id": 258
+  },
+  {
+      "Descritivo": "Vila Pouca de Aguiar",
+      "IdDistrito": 17,
+      "Distrito": {
+          "Descritivo": "Vila Real",
+          "Id": 17
+      },
+      "Id": 257
+  },
+  {
+      "Descritivo": "Vila Nova de Poiares",
+      "IdDistrito": 6,
+      "Distrito": {
+          "Descritivo": "Coimbra",
+          "Id": 6
+      },
+      "Id": 89
+  },
+  {
+      "Descritivo": "Vila Nova de Paiva",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 280
+  },
+  {
+      "Descritivo": "Vila Nova de Gaia",
+      "IdDistrito": 13,
+      "Distrito": {
+          "Descritivo": "Porto",
+          "Id": 13
+      },
+      "Id": 198
+  },
+  {
+      "Descritivo": "Vila Nova de Foz Côa",
+      "IdDistrito": 9,
+      "Distrito": {
+          "Descritivo": "Guarda",
+          "Id": 9
+      },
+      "Id": 133
+  },
+  {
+      "Descritivo": "Vila Nova de Famalicão",
+      "IdDistrito": 3,
+      "Distrito": {
+          "Descritivo": "Braga",
+          "Id": 3
+      },
+      "Id": 46
+  },
+  {
+      "Descritivo": "Vila Nova de Cerveira",
+      "IdDistrito": 16,
+      "Distrito": {
+          "Descritivo": "Viana do Castelo",
+          "Id": 16
+      },
+      "Id": 243
+  },
+  {
+      "Descritivo": "Vila Nova da Barquinha",
+      "IdDistrito": 14,
+      "Distrito": {
+          "Descritivo": "Santarém",
+          "Id": 14
+      },
+      "Id": 219
+  },
+  {
+      "Descritivo": "Vila Franca de Xira",
+      "IdDistrito": 11,
+      "Distrito": {
+          "Descritivo": "Lisboa",
+          "Id": 11
+      },
+      "Id": 165
+  },
+  {
+      "Descritivo": "Vila Flor",
+      "IdDistrito": 4,
+      "Distrito": {
+          "Descritivo": "Bragança",
+          "Id": 4
+      },
+      "Id": 59
+  },
+  {
+      "Descritivo": "Vila do Conde",
+      "IdDistrito": 13,
+      "Distrito": {
+          "Descritivo": "Porto",
+          "Id": 13
+      },
+      "Id": 197
+  },
+  {
+      "Descritivo": "Vila do Bispo",
+      "IdDistrito": 8,
+      "Distrito": {
+          "Descritivo": "Faro",
+          "Id": 8
+      },
+      "Id": 118
+  },
+  {
+      "Descritivo": "Vila de Rei",
+      "IdDistrito": 5,
+      "Distrito": {
+          "Descritivo": "Castelo Branco",
+          "Id": 5
+      },
+      "Id": 71
+  },
+  {
+      "Descritivo": "Vieira do Minho",
+      "IdDistrito": 3,
+      "Distrito": {
+          "Descritivo": "Braga",
+          "Id": 3
+      },
+      "Id": 45
+  },
+  {
+      "Descritivo": "Vidigueira",
+      "IdDistrito": 2,
+      "Distrito": {
+          "Descritivo": "Beja",
+          "Id": 2
+      },
+      "Id": 33
+  },
+  {
+      "Descritivo": "Viana do Castelo",
+      "IdDistrito": 16,
+      "Distrito": {
+          "Descritivo": "Viana do Castelo",
+          "Id": 16
+      },
+      "Id": 242
+  },
+  {
+      "Descritivo": "Viana do Alentejo",
+      "IdDistrito": 7,
+      "Distrito": {
+          "Descritivo": "Évora",
+          "Id": 7
+      },
+      "Id": 102
+  },
+  {
+      "Descritivo": "Vendas Novas",
+      "IdDistrito": 7,
+      "Distrito": {
+          "Descritivo": "Évora",
+          "Id": 7
+      },
+      "Id": 101
+  },
+  {
+      "Descritivo": "Valpaços",
+      "IdDistrito": 17,
+      "Distrito": {
+          "Descritivo": "Vila Real",
+          "Id": 17
+      },
+      "Id": 256
+  },
+  {
+      "Descritivo": "Valongo",
+      "IdDistrito": 13,
+      "Distrito": {
+          "Descritivo": "Porto",
+          "Id": 13
+      },
+      "Id": 196
+  },
+  {
+      "Descritivo": "Valença",
+      "IdDistrito": 16,
+      "Distrito": {
+          "Descritivo": "Viana do Castelo",
+          "Id": 16
+      },
+      "Id": 241
+  },
+  {
+      "Descritivo": "Vale de Cambra",
+      "IdDistrito": 1,
+      "Distrito": {
+          "Descritivo": "Aveiro",
+          "Id": 1
+      },
+      "Id": 19
+  },
+  {
+      "Descritivo": "Vagos",
+      "IdDistrito": 1,
+      "Distrito": {
+          "Descritivo": "Aveiro",
+          "Id": 1
+      },
+      "Id": 18
+  },
+  {
+      "Descritivo": "Trofa",
+      "IdDistrito": 13,
+      "Distrito": {
+          "Descritivo": "Porto",
+          "Id": 13
+      },
+      "Id": 195
+  },
+  {
+      "Descritivo": "Trancoso",
+      "IdDistrito": 9,
+      "Distrito": {
+          "Descritivo": "Guarda",
+          "Id": 9
+      },
+      "Id": 132
+  },
+  {
+      "Descritivo": "Torres Vedras",
+      "IdDistrito": 11,
+      "Distrito": {
+          "Descritivo": "Lisboa",
+          "Id": 11
+      },
+      "Id": 164
+  },
+  {
+      "Descritivo": "Torres Novas",
+      "IdDistrito": 14,
+      "Distrito": {
+          "Descritivo": "Santarém",
+          "Id": 14
+      },
+      "Id": 218
+  },
+  {
+      "Descritivo": "Torre de Moncorvo",
+      "IdDistrito": 4,
+      "Distrito": {
+          "Descritivo": "Bragança",
+          "Id": 4
+      },
+      "Id": 58
+  },
+  {
+      "Descritivo": "Tondela",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 279
+  },
+  {
+      "Descritivo": "Tomar",
+      "IdDistrito": 14,
+      "Distrito": {
+          "Descritivo": "Santarém",
+          "Id": 14
+      },
+      "Id": 217
+  },
+  {
+      "Descritivo": "Terras de Bouro",
+      "IdDistrito": 3,
+      "Distrito": {
+          "Descritivo": "Braga",
+          "Id": 3
+      },
+      "Id": 44
+  },
+  {
+      "Descritivo": "Tavira",
+      "IdDistrito": 8,
+      "Distrito": {
+          "Descritivo": "Faro",
+          "Id": 8
+      },
+      "Id": 117
+  },
+  {
+      "Descritivo": "Tarouca",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 278
+  },
+  {
+      "Descritivo": "Tabuaço",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 277
+  },
+  {
+      "Descritivo": "Tábua",
+      "IdDistrito": 6,
+      "Distrito": {
+          "Descritivo": "Coimbra",
+          "Id": 6
+      },
+      "Id": 88
+  },
+  {
+      "Descritivo": "Sousel",
+      "IdDistrito": 12,
+      "Distrito": {
+          "Descritivo": "Portalegre",
+          "Id": 12
+      },
+      "Id": 180
+  },
+  {
+      "Descritivo": "Soure",
+      "IdDistrito": 6,
+      "Distrito": {
+          "Descritivo": "Coimbra",
+          "Id": 6
+      },
+      "Id": 87
+  },
+  {
+      "Descritivo": "Sobral de Monte Agraço",
+      "IdDistrito": 11,
+      "Distrito": {
+          "Descritivo": "Lisboa",
+          "Id": 11
+      },
+      "Id": 163
+  },
+  {
+      "Descritivo": "Sintra",
+      "IdDistrito": 11,
+      "Distrito": {
+          "Descritivo": "Lisboa",
+          "Id": 11
+      },
+      "Id": 162
+  },
+  {
+      "Descritivo": "Sines",
+      "IdDistrito": 15,
+      "Distrito": {
+          "Descritivo": "Setúbal",
+          "Id": 15
+      },
+      "Id": 232
+  },
+  {
+      "Descritivo": "Silves",
+      "IdDistrito": 8,
+      "Distrito": {
+          "Descritivo": "Faro",
+          "Id": 8
+      },
+      "Id": 116
+  },
+  {
+      "Descritivo": "Sever do Vouga",
+      "IdDistrito": 1,
+      "Distrito": {
+          "Descritivo": "Aveiro",
+          "Id": 1
+      },
+      "Id": 17
+  },
+  {
+      "Descritivo": "Setúbal",
+      "IdDistrito": 15,
+      "Distrito": {
+          "Descritivo": "Setúbal",
+          "Id": 15
+      },
+      "Id": 231
+  },
+  {
+      "Descritivo": "Sesimbra",
+      "IdDistrito": 15,
+      "Distrito": {
+          "Descritivo": "Setúbal",
+          "Id": 15
+      },
+      "Id": 230
+  },
+  {
+      "Descritivo": "Sertã",
+      "IdDistrito": 5,
+      "Distrito": {
+          "Descritivo": "Castelo Branco",
+          "Id": 5
+      },
+      "Id": 70
+  },
+  {
+      "Descritivo": "Serpa",
+      "IdDistrito": 2,
+      "Distrito": {
+          "Descritivo": "Beja",
+          "Id": 2
+      },
+      "Id": 32
+  },
+  {
+      "Descritivo": "Sernancelhe",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 276
+  },
+  {
+      "Descritivo": "Seixal",
+      "IdDistrito": 15,
+      "Distrito": {
+          "Descritivo": "Setúbal",
+          "Id": 15
+      },
+      "Id": 229
+  },
+  {
+      "Descritivo": "Seia",
+      "IdDistrito": 9,
+      "Distrito": {
+          "Descritivo": "Guarda",
+          "Id": 9
+      },
+      "Id": 131
+  },
+  {
+      "Descritivo": "Sátão",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 275
+  },
+  {
+      "Descritivo": "Sardoal",
+      "IdDistrito": 14,
+      "Distrito": {
+          "Descritivo": "Santarém",
+          "Id": 14
+      },
+      "Id": 216
+  },
+  {
+      "Descritivo": "São Pedro do Sul",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 274
+  },
+  {
+      "Descritivo": "São João da Pesqueira",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 273
+  },
+  {
+      "Descritivo": "São João da Madeira",
+      "IdDistrito": 1,
+      "Distrito": {
+          "Descritivo": "Aveiro",
+          "Id": 1
+      },
+      "Id": 16
+  },
+  {
+      "Descritivo": "São Brás de Alportel",
+      "IdDistrito": 8,
+      "Distrito": {
+          "Descritivo": "Faro",
+          "Id": 8
+      },
+      "Id": 115
+  },
+  {
+      "Descritivo": "Santo Tirso",
+      "IdDistrito": 13,
+      "Distrito": {
+          "Descritivo": "Porto",
+          "Id": 13
+      },
+      "Id": 194
+  },
+  {
+      "Descritivo": "Santiago do Cacém",
+      "IdDistrito": 15,
+      "Distrito": {
+          "Descritivo": "Setúbal",
+          "Id": 15
+      },
+      "Id": 228
+  },
+  {
+      "Descritivo": "Santarém",
+      "IdDistrito": 14,
+      "Distrito": {
+          "Descritivo": "Santarém",
+          "Id": 14
+      },
+      "Id": 215
+  },
+  {
+      "Descritivo": "Santa Marta de Penaguião",
+      "IdDistrito": 17,
+      "Distrito": {
+          "Descritivo": "Vila Real",
+          "Id": 17
+      },
+      "Id": 255
+  },
+  {
+      "Descritivo": "Santa Maria da Feira",
+      "IdDistrito": 1,
+      "Distrito": {
+          "Descritivo": "Aveiro",
+          "Id": 1
+      },
+      "Id": 15
+  },
+  {
+      "Descritivo": "Santa Comba Dão",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 272
+  },
+  {
+      "Descritivo": "Salvaterra de Magos",
+      "IdDistrito": 14,
+      "Distrito": {
+          "Descritivo": "Santarém",
+          "Id": 14
+      },
+      "Id": 214
+  },
+  {
+      "Descritivo": "Sabugal",
+      "IdDistrito": 9,
+      "Distrito": {
+          "Descritivo": "Guarda",
+          "Id": 9
+      },
+      "Id": 130
+  },
+  {
+      "Descritivo": "Sabrosa",
+      "IdDistrito": 17,
+      "Distrito": {
+          "Descritivo": "Vila Real",
+          "Id": 17
+      },
+      "Id": 254
+  },
+  {
+      "Descritivo": "Rio Maior",
+      "IdDistrito": 14,
+      "Distrito": {
+          "Descritivo": "Santarém",
+          "Id": 14
+      },
+      "Id": 213
+  },
+  {
+      "Descritivo": "Ribeira de Pena",
+      "IdDistrito": 17,
+      "Distrito": {
+          "Descritivo": "Vila Real",
+          "Id": 17
+      },
+      "Id": 253
+  },
+  {
+      "Descritivo": "Resende",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 271
+  },
+  {
+      "Descritivo": "Reguengos de Monsaraz",
+      "IdDistrito": 7,
+      "Distrito": {
+          "Descritivo": "Évora",
+          "Id": 7
+      },
+      "Id": 100
+  },
+  {
+      "Descritivo": "Redondo",
+      "IdDistrito": 7,
+      "Distrito": {
+          "Descritivo": "Évora",
+          "Id": 7
+      },
+      "Id": 99
+  },
+  {
+      "Descritivo": "Proença-a-Nova",
+      "IdDistrito": 5,
+      "Distrito": {
+          "Descritivo": "Castelo Branco",
+          "Id": 5
+      },
+      "Id": 69
+  },
+  {
+      "Descritivo": "Póvoa de Varzim",
+      "IdDistrito": 13,
+      "Distrito": {
+          "Descritivo": "Porto",
+          "Id": 13
+      },
+      "Id": 193
+  },
+  {
+      "Descritivo": "Póvoa de Lanhoso",
+      "IdDistrito": 3,
+      "Distrito": {
+          "Descritivo": "Braga",
+          "Id": 3
+      },
+      "Id": 43
+  },
+  {
+      "Descritivo": "Porto de Mós",
+      "IdDistrito": 10,
+      "Distrito": {
+          "Descritivo": "Leiria",
+          "Id": 10
+      },
+      "Id": 149
+  },
+  {
+      "Descritivo": "Porto",
+      "IdDistrito": 13,
+      "Distrito": {
+          "Descritivo": "Porto",
+          "Id": 13
+      },
+      "Id": 192
+  },
+  {
+      "Descritivo": "Portimão",
+      "IdDistrito": 8,
+      "Distrito": {
+          "Descritivo": "Faro",
+          "Id": 8
+      },
+      "Id": 114
+  },
+  {
+      "Descritivo": "Portel",
+      "IdDistrito": 7,
+      "Distrito": {
+          "Descritivo": "Évora",
+          "Id": 7
+      },
+      "Id": 98
+  },
+  {
+      "Descritivo": "Portalegre",
+      "IdDistrito": 12,
+      "Distrito": {
+          "Descritivo": "Portalegre",
+          "Id": 12
+      },
+      "Id": 179
+  },
+  {
+      "Descritivo": "Ponte de Sor",
+      "IdDistrito": 12,
+      "Distrito": {
+          "Descritivo": "Portalegre",
+          "Id": 12
+      },
+      "Id": 178
+  },
+  {
+      "Descritivo": "Ponte de Lima",
+      "IdDistrito": 16,
+      "Distrito": {
+          "Descritivo": "Viana do Castelo",
+          "Id": 16
+      },
+      "Id": 240
+  },
+  {
+      "Descritivo": "Ponte da Barca",
+      "IdDistrito": 16,
+      "Distrito": {
+          "Descritivo": "Viana do Castelo",
+          "Id": 16
+      },
+      "Id": 239
+  },
+  {
+      "Descritivo": "Pombal",
+      "IdDistrito": 10,
+      "Distrito": {
+          "Descritivo": "Leiria",
+          "Id": 10
+      },
+      "Id": 148
+  },
+  {
+      "Descritivo": "Pinhel",
+      "IdDistrito": 9,
+      "Distrito": {
+          "Descritivo": "Guarda",
+          "Id": 9
+      },
+      "Id": 129
+  },
+  {
+      "Descritivo": "Peso da Régua",
+      "IdDistrito": 17,
+      "Distrito": {
+          "Descritivo": "Vila Real",
+          "Id": 17
+      },
+      "Id": 252
+  },
+  {
+      "Descritivo": "Peniche",
+      "IdDistrito": 10,
+      "Distrito": {
+          "Descritivo": "Leiria",
+          "Id": 10
+      },
+      "Id": 147
+  },
+  {
+      "Descritivo": "Penela",
+      "IdDistrito": 6,
+      "Distrito": {
+          "Descritivo": "Coimbra",
+          "Id": 6
+      },
+      "Id": 86
+  },
+  {
+      "Descritivo": "Penedono",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 270
+  },
+  {
+      "Descritivo": "Penamacor",
+      "IdDistrito": 5,
+      "Distrito": {
+          "Descritivo": "Castelo Branco",
+          "Id": 5
+      },
+      "Id": 68
+  },
+  {
+      "Descritivo": "Penalva do Castelo",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 269
+  },
+  {
+      "Descritivo": "Penafiel",
+      "IdDistrito": 13,
+      "Distrito": {
+          "Descritivo": "Porto",
+          "Id": 13
+      },
+      "Id": 191
+  },
+  {
+      "Descritivo": "Penacova",
+      "IdDistrito": 6,
+      "Distrito": {
+          "Descritivo": "Coimbra",
+          "Id": 6
+      },
+      "Id": 85
+  },
+  {
+      "Descritivo": "Pedrógão Grande",
+      "IdDistrito": 10,
+      "Distrito": {
+          "Descritivo": "Leiria",
+          "Id": 10
+      },
+      "Id": 146
+  },
+  {
+      "Descritivo": "Paredes de Coura",
+      "IdDistrito": 16,
+      "Distrito": {
+          "Descritivo": "Viana do Castelo",
+          "Id": 16
+      },
+      "Id": 238
+  },
+  {
+      "Descritivo": "Paredes",
+      "IdDistrito": 13,
+      "Distrito": {
+          "Descritivo": "Porto",
+          "Id": 13
+      },
+      "Id": 190
+  },
+  {
+      "Descritivo": "Pampilhosa da Serra",
+      "IdDistrito": 6,
+      "Distrito": {
+          "Descritivo": "Coimbra",
+          "Id": 6
+      },
+      "Id": 84
+  },
+  {
+      "Descritivo": "Palmela",
+      "IdDistrito": 15,
+      "Distrito": {
+          "Descritivo": "Setúbal",
+          "Id": 15
+      },
+      "Id": 227
+  },
+  {
+      "Descritivo": "Paços de Ferreira",
+      "IdDistrito": 13,
+      "Distrito": {
+          "Descritivo": "Porto",
+          "Id": 13
+      },
+      "Id": 189
+  },
+  {
+      "Descritivo": "Ovar",
+      "IdDistrito": 1,
+      "Distrito": {
+          "Descritivo": "Aveiro",
+          "Id": 1
+      },
+      "Id": 14
+  },
+  {
+      "Descritivo": "Ourique",
+      "IdDistrito": 2,
+      "Distrito": {
+          "Descritivo": "Beja",
+          "Id": 2
+      },
+      "Id": 31
+  },
+  {
+      "Descritivo": "Ourém",
+      "IdDistrito": 14,
+      "Distrito": {
+          "Descritivo": "Santarém",
+          "Id": 14
+      },
+      "Id": 212
+  },
+  {
+      "Descritivo": "Oliveira do Hospital",
+      "IdDistrito": 6,
+      "Distrito": {
+          "Descritivo": "Coimbra",
+          "Id": 6
+      },
+      "Id": 83
+  },
+  {
+      "Descritivo": "Oliveira do Bairro",
+      "IdDistrito": 1,
+      "Distrito": {
+          "Descritivo": "Aveiro",
+          "Id": 1
+      },
+      "Id": 13
+  },
+  {
+      "Descritivo": "Oliveira de Frades",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 268
+  },
+  {
+      "Descritivo": "Oliveira de Azeméis",
+      "IdDistrito": 1,
+      "Distrito": {
+          "Descritivo": "Aveiro",
+          "Id": 1
+      },
+      "Id": 12
+  },
+  {
+      "Descritivo": "Olhão",
+      "IdDistrito": 8,
+      "Distrito": {
+          "Descritivo": "Faro",
+          "Id": 8
+      },
+      "Id": 113
+  },
+  {
+      "Descritivo": "Oleiros",
+      "IdDistrito": 5,
+      "Distrito": {
+          "Descritivo": "Castelo Branco",
+          "Id": 5
+      },
+      "Id": 67
+  },
+  {
+      "Descritivo": "Oeiras",
+      "IdDistrito": 11,
+      "Distrito": {
+          "Descritivo": "Lisboa",
+          "Id": 11
+      },
+      "Id": 161
+  },
+  {
+      "Descritivo": "Odivelas",
+      "IdDistrito": 11,
+      "Distrito": {
+          "Descritivo": "Lisboa",
+          "Id": 11
+      },
+      "Id": 160
+  },
+  {
+      "Descritivo": "Odemira",
+      "IdDistrito": 2,
+      "Distrito": {
+          "Descritivo": "Beja",
+          "Id": 2
+      },
+      "Id": 30
+  },
+  {
+      "Descritivo": "Óbidos",
+      "IdDistrito": 10,
+      "Distrito": {
+          "Descritivo": "Leiria",
+          "Id": 10
+      },
+      "Id": 145
+  },
+  {
+      "Descritivo": "Nisa",
+      "IdDistrito": 12,
+      "Distrito": {
+          "Descritivo": "Portalegre",
+          "Id": 12
+      },
+      "Id": 177
+  },
+  {
+      "Descritivo": "Nelas",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 267
+  },
+  {
+      "Descritivo": "Nazaré",
+      "IdDistrito": 10,
+      "Distrito": {
+          "Descritivo": "Leiria",
+          "Id": 10
+      },
+      "Id": 144
+  },
+  {
+      "Descritivo": "Murtosa",
+      "IdDistrito": 1,
+      "Distrito": {
+          "Descritivo": "Aveiro",
+          "Id": 1
+      },
+      "Id": 11
+  },
+  {
+      "Descritivo": "Murça",
+      "IdDistrito": 17,
+      "Distrito": {
+          "Descritivo": "Vila Real",
+          "Id": 17
+      },
+      "Id": 251
+  },
+  {
+      "Descritivo": "Mourão",
+      "IdDistrito": 7,
+      "Distrito": {
+          "Descritivo": "Évora",
+          "Id": 7
+      },
+      "Id": 97
+  },
+  {
+      "Descritivo": "Moura",
+      "IdDistrito": 2,
+      "Distrito": {
+          "Descritivo": "Beja",
+          "Id": 2
+      },
+      "Id": 29
+  },
+  {
+      "Descritivo": "Mortágua",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 266
+  },
+  {
+      "Descritivo": "Mora",
+      "IdDistrito": 7,
+      "Distrito": {
+          "Descritivo": "Évora",
+          "Id": 7
+      },
+      "Id": 96
+  },
+  {
+      "Descritivo": "Montijo",
+      "IdDistrito": 15,
+      "Distrito": {
+          "Descritivo": "Setúbal",
+          "Id": 15
+      },
+      "Id": 226
+  },
+  {
+      "Descritivo": "Montemor-o-Velho",
+      "IdDistrito": 6,
+      "Distrito": {
+          "Descritivo": "Coimbra",
+          "Id": 6
+      },
+      "Id": 82
+  },
+  {
+      "Descritivo": "Montemor-o-Novo",
+      "IdDistrito": 7,
+      "Distrito": {
+          "Descritivo": "Évora",
+          "Id": 7
+      },
+      "Id": 95
+  },
+  {
+      "Descritivo": "Montalegre",
+      "IdDistrito": 17,
+      "Distrito": {
+          "Descritivo": "Vila Real",
+          "Id": 17
+      },
+      "Id": 250
+  },
+  {
+      "Descritivo": "Monforte",
+      "IdDistrito": 12,
+      "Distrito": {
+          "Descritivo": "Portalegre",
+          "Id": 12
+      },
+      "Id": 176
+  },
+  {
+      "Descritivo": "Mondim de Basto",
+      "IdDistrito": 17,
+      "Distrito": {
+          "Descritivo": "Vila Real",
+          "Id": 17
+      },
+      "Id": 249
+  },
+  {
+      "Descritivo": "Monchique",
+      "IdDistrito": 8,
+      "Distrito": {
+          "Descritivo": "Faro",
+          "Id": 8
+      },
+      "Id": 112
+  },
+  {
+      "Descritivo": "Monção",
+      "IdDistrito": 16,
+      "Distrito": {
+          "Descritivo": "Viana do Castelo",
+          "Id": 16
+      },
+      "Id": 237
+  },
+  {
+      "Descritivo": "Moita",
+      "IdDistrito": 15,
+      "Distrito": {
+          "Descritivo": "Setúbal",
+          "Id": 15
+      },
+      "Id": 225
+  },
+  {
+      "Descritivo": "Moimenta da Beira",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 265
+  },
+  {
+      "Descritivo": "Mogadouro",
+      "IdDistrito": 4,
+      "Distrito": {
+          "Descritivo": "Bragança",
+          "Id": 4
+      },
+      "Id": 57
+  },
+  {
+      "Descritivo": "Mirandela",
+      "IdDistrito": 4,
+      "Distrito": {
+          "Descritivo": "Bragança",
+          "Id": 4
+      },
+      "Id": 56
+  },
+  {
+      "Descritivo": "Miranda do Douro",
+      "IdDistrito": 4,
+      "Distrito": {
+          "Descritivo": "Bragança",
+          "Id": 4
+      },
+      "Id": 55
+  },
+  {
+      "Descritivo": "Miranda do Corvo",
+      "IdDistrito": 6,
+      "Distrito": {
+          "Descritivo": "Coimbra",
+          "Id": 6
+      },
+      "Id": 81
+  },
+  {
+      "Descritivo": "Mira",
+      "IdDistrito": 6,
+      "Distrito": {
+          "Descritivo": "Coimbra",
+          "Id": 6
+      },
+      "Id": 80
+  },
+  {
+      "Descritivo": "Mesão Frio",
+      "IdDistrito": 17,
+      "Distrito": {
+          "Descritivo": "Vila Real",
+          "Id": 17
+      },
+      "Id": 248
+  },
+  {
+      "Descritivo": "Mértola",
+      "IdDistrito": 2,
+      "Distrito": {
+          "Descritivo": "Beja",
+          "Id": 2
+      },
+      "Id": 28
+  },
+  {
+      "Descritivo": "Melgao",
+      "IdDistrito": 16,
+      "Distrito": {
+          "Descritivo": "Viana do Castelo",
+          "Id": 16
+      },
+      "Id": 236
+  },
+  {
+      "Descritivo": "Melgaço",
+      "IdDistrito": 16,
+      "Distrito": {
+          "Descritivo": "Viana do Castelo",
+          "Id": 16
+      },
+      "Id": 235
+  },
+  {
+      "Descritivo": "Meda",
+      "IdDistrito": 9,
+      "Distrito": {
+          "Descritivo": "Guarda",
+          "Id": 9
+      },
+      "Id": 128
+  },
+  {
+      "Descritivo": "Mealhada",
+      "IdDistrito": 1,
+      "Distrito": {
+          "Descritivo": "Aveiro",
+          "Id": 1
+      },
+      "Id": 10
+  },
+  {
+      "Descritivo": "Matosinhos",
+      "IdDistrito": 13,
+      "Distrito": {
+          "Descritivo": "Porto",
+          "Id": 13
+      },
+      "Id": 188
+  },
+  {
+      "Descritivo": "Marvão",
+      "IdDistrito": 12,
+      "Distrito": {
+          "Descritivo": "Portalegre",
+          "Id": 12
+      },
+      "Id": 175
+  },
+  {
+      "Descritivo": "Marinha Grande",
+      "IdDistrito": 10,
+      "Distrito": {
+          "Descritivo": "Leiria",
+          "Id": 10
+      },
+      "Id": 143
+  },
+  {
+      "Descritivo": "Marco de Canaveses",
+      "IdDistrito": 13,
+      "Distrito": {
+          "Descritivo": "Porto",
+          "Id": 13
+      },
+      "Id": 187
+  },
+  {
+      "Descritivo": "Manteigas",
+      "IdDistrito": 9,
+      "Distrito": {
+          "Descritivo": "Guarda",
+          "Id": 9
+      },
+      "Id": 127
+  },
+  {
+      "Descritivo": "Mangualde",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 264
+  },
+  {
+      "Descritivo": "Maia",
+      "IdDistrito": 13,
+      "Distrito": {
+          "Descritivo": "Porto",
+          "Id": 13
+      },
+      "Id": 186
+  },
+  {
+      "Descritivo": "Mafra",
+      "IdDistrito": 11,
+      "Distrito": {
+          "Descritivo": "Lisboa",
+          "Id": 11
+      },
+      "Id": 159
+  },
+  {
+      "Descritivo": "Macedo de Cavaleiros",
+      "IdDistrito": 4,
+      "Distrito": {
+          "Descritivo": "Bragança",
+          "Id": 4
+      },
+      "Id": 54
+  },
+  {
+      "Descritivo": "Mação",
+      "IdDistrito": 14,
+      "Distrito": {
+          "Descritivo": "Santarém",
+          "Id": 14
+      },
+      "Id": 211
+  },
+  {
+      "Descritivo": "Lousada",
+      "IdDistrito": 13,
+      "Distrito": {
+          "Descritivo": "Porto",
+          "Id": 13
+      },
+      "Id": 185
+  },
+  {
+      "Descritivo": "Lousã",
+      "IdDistrito": 6,
+      "Distrito": {
+          "Descritivo": "Coimbra",
+          "Id": 6
+      },
+      "Id": 79
+  },
+  {
+      "Descritivo": "Lourinhã",
+      "IdDistrito": 11,
+      "Distrito": {
+          "Descritivo": "Lisboa",
+          "Id": 11
+      },
+      "Id": 158
+  },
+  {
+      "Descritivo": "Loures",
+      "IdDistrito": 11,
+      "Distrito": {
+          "Descritivo": "Lisboa",
+          "Id": 11
+      },
+      "Id": 157
+  },
+  {
+      "Descritivo": "Loulé",
+      "IdDistrito": 8,
+      "Distrito": {
+          "Descritivo": "Faro",
+          "Id": 8
+      },
+      "Id": 111
+  },
+  {
+      "Descritivo": "Lisboa",
+      "IdDistrito": 11,
+      "Distrito": {
+          "Descritivo": "Lisboa",
+          "Id": 11
+      },
+      "Id": 156
+  },
+  {
+      "Descritivo": "Leiria",
+      "IdDistrito": 10,
+      "Distrito": {
+          "Descritivo": "Leiria",
+          "Id": 10
+      },
+      "Id": 142
+  },
+  {
+      "Descritivo": "Lamego",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 263
+  },
+  {
+      "Descritivo": "Lagos",
+      "IdDistrito": 8,
+      "Distrito": {
+          "Descritivo": "Faro",
+          "Id": 8
+      },
+      "Id": 110
+  },
+  {
+      "Descritivo": "Lagoa",
+      "IdDistrito": 8,
+      "Distrito": {
+          "Descritivo": "Faro",
+          "Id": 8
+      },
+      "Id": 109
+  },
+  {
+      "Descritivo": "Ílhavo",
+      "IdDistrito": 1,
+      "Distrito": {
+          "Descritivo": "Aveiro",
+          "Id": 1
+      },
+      "Id": 9
+  },
+  {
+      "Descritivo": "Idanha-a-Nova",
+      "IdDistrito": 5,
+      "Distrito": {
+          "Descritivo": "Castelo Branco",
+          "Id": 5
+      },
+      "Id": 66
+  },
+  {
+      "Descritivo": "Guimares",
+      "IdDistrito": 3,
+      "Distrito": {
+          "Descritivo": "Braga",
+          "Id": 3
+      },
+      "Id": 42
+  },
+  {
+      "Descritivo": "Guimarães",
+      "IdDistrito": 3,
+      "Distrito": {
+          "Descritivo": "Braga",
+          "Id": 3
+      },
+      "Id": 41
+  },
+  {
+      "Descritivo": "Guarda",
+      "IdDistrito": 9,
+      "Distrito": {
+          "Descritivo": "Guarda",
+          "Id": 9
+      },
+      "Id": 126
+  },
+  {
+      "Descritivo": "Grândola",
+      "IdDistrito": 15,
+      "Distrito": {
+          "Descritivo": "Setúbal",
+          "Id": 15
+      },
+      "Id": 224
+  },
+  {
+      "Descritivo": "Gouveia",
+      "IdDistrito": 9,
+      "Distrito": {
+          "Descritivo": "Guarda",
+          "Id": 9
+      },
+      "Id": 125
+  },
+  {
+      "Descritivo": "Gondomar",
+      "IdDistrito": 13,
+      "Distrito": {
+          "Descritivo": "Porto",
+          "Id": 13
+      },
+      "Id": 184
+  },
+  {
+      "Descritivo": "Golegã",
+      "IdDistrito": 14,
+      "Distrito": {
+          "Descritivo": "Santarém",
+          "Id": 14
+      },
+      "Id": 210
+  },
+  {
+      "Descritivo": "Góis",
+      "IdDistrito": 6,
+      "Distrito": {
+          "Descritivo": "Coimbra",
+          "Id": 6
+      },
+      "Id": 78
+  },
+  {
+      "Descritivo": "Gavião",
+      "IdDistrito": 12,
+      "Distrito": {
+          "Descritivo": "Portalegre",
+          "Id": 12
+      },
+      "Id": 174
+  },
+  {
+      "Descritivo": "Fundão",
+      "IdDistrito": 5,
+      "Distrito": {
+          "Descritivo": "Castelo Branco",
+          "Id": 5
+      },
+      "Id": 65
+  },
+  {
+      "Descritivo": "Fronteira",
+      "IdDistrito": 12,
+      "Distrito": {
+          "Descritivo": "Portalegre",
+          "Id": 12
+      },
+      "Id": 173
+  },
+  {
+      "Descritivo": "Freixo de Espada à Cinta",
+      "IdDistrito": 4,
+      "Distrito": {
+          "Descritivo": "Bragança",
+          "Id": 4
+      },
+      "Id": 53
+  },
+  {
+      "Descritivo": "Fornos de Algodres",
+      "IdDistrito": 9,
+      "Distrito": {
+          "Descritivo": "Guarda",
+          "Id": 9
+      },
+      "Id": 124
+  },
+  {
+      "Descritivo": "Figueiró dos Vinhos",
+      "IdDistrito": 10,
+      "Distrito": {
+          "Descritivo": "Leiria",
+          "Id": 10
+      },
+      "Id": 141
+  },
+  {
+      "Descritivo": "Figueira de Castelo Rodrigo",
+      "IdDistrito": 9,
+      "Distrito": {
+          "Descritivo": "Guarda",
+          "Id": 9
+      },
+      "Id": 123
+  },
+  {
+      "Descritivo": "Figueira da Foz",
+      "IdDistrito": 6,
+      "Distrito": {
+          "Descritivo": "Coimbra",
+          "Id": 6
+      },
+      "Id": 77
+  },
+  {
+      "Descritivo": "Ferreira do Zêzere",
+      "IdDistrito": 14,
+      "Distrito": {
+          "Descritivo": "Santarém",
+          "Id": 14
+      },
+      "Id": 209
+  },
+  {
+      "Descritivo": "Ferreira do Alentejo",
+      "IdDistrito": 2,
+      "Distrito": {
+          "Descritivo": "Beja",
+          "Id": 2
+      },
+      "Id": 27
+  },
+  {
+      "Descritivo": "Felgueiras",
+      "IdDistrito": 13,
+      "Distrito": {
+          "Descritivo": "Porto",
+          "Id": 13
+      },
+      "Id": 183
+  },
+  {
+      "Descritivo": "Faro",
+      "IdDistrito": 8,
+      "Distrito": {
+          "Descritivo": "Faro",
+          "Id": 8
+      },
+      "Id": 108
+  },
+  {
+      "Descritivo": "Fafe",
+      "IdDistrito": 3,
+      "Distrito": {
+          "Descritivo": "Braga",
+          "Id": 3
+      },
+      "Id": 40
+  },
+  {
+      "Descritivo": "Évora",
+      "IdDistrito": 7,
+      "Distrito": {
+          "Descritivo": "Évora",
+          "Id": 7
+      },
+      "Id": 94
+  },
+  {
+      "Descritivo": "Estremoz",
+      "IdDistrito": 7,
+      "Distrito": {
+          "Descritivo": "Évora",
+          "Id": 7
+      },
+      "Id": 93
+  },
+  {
+      "Descritivo": "Estarreja",
+      "IdDistrito": 1,
+      "Distrito": {
+          "Descritivo": "Aveiro",
+          "Id": 1
+      },
+      "Id": 8
+  },
+  {
+      "Descritivo": "Esposende",
+      "IdDistrito": 3,
+      "Distrito": {
+          "Descritivo": "Braga",
+          "Id": 3
+      },
+      "Id": 39
+  },
+  {
+      "Descritivo": "Espinho",
+      "IdDistrito": 1,
+      "Distrito": {
+          "Descritivo": "Aveiro",
+          "Id": 1
+      },
+      "Id": 7
+  },
+  {
+      "Descritivo": "Entroncamento",
+      "IdDistrito": 14,
+      "Distrito": {
+          "Descritivo": "Santarém",
+          "Id": 14
+      },
+      "Id": 208
+  },
+  {
+      "Descritivo": "Elvas",
+      "IdDistrito": 12,
+      "Distrito": {
+          "Descritivo": "Portalegre",
+          "Id": 12
+      },
+      "Id": 172
+  },
+  {
+      "Descritivo": "Cuba",
+      "IdDistrito": 2,
+      "Distrito": {
+          "Descritivo": "Beja",
+          "Id": 2
+      },
+      "Id": 26
+  },
+  {
+      "Descritivo": "Crato",
+      "IdDistrito": 12,
+      "Distrito": {
+          "Descritivo": "Portalegre",
+          "Id": 12
+      },
+      "Id": 171
+  },
+  {
+      "Descritivo": "Covilhã",
+      "IdDistrito": 5,
+      "Distrito": {
+          "Descritivo": "Castelo Branco",
+          "Id": 5
+      },
+      "Id": 64
+  },
+  {
+      "Descritivo": "Coruche",
+      "IdDistrito": 14,
+      "Distrito": {
+          "Descritivo": "Santarém",
+          "Id": 14
+      },
+      "Id": 207
+  },
+  {
+      "Descritivo": "Constância",
+      "IdDistrito": 14,
+      "Distrito": {
+          "Descritivo": "Santarém",
+          "Id": 14
+      },
+      "Id": 206
+  },
+  {
+      "Descritivo": "Condeixa-a-Nova",
+      "IdDistrito": 6,
+      "Distrito": {
+          "Descritivo": "Coimbra",
+          "Id": 6
+      },
+      "Id": 76
+  },
+  {
+      "Descritivo": "Coimbra",
+      "IdDistrito": 6,
+      "Distrito": {
+          "Descritivo": "Coimbra",
+          "Id": 6
+      },
+      "Id": 75
+  },
+  {
+      "Descritivo": "Cinfães",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 262
+  },
+  {
+      "Descritivo": "Chaves",
+      "IdDistrito": 17,
+      "Distrito": {
+          "Descritivo": "Vila Real",
+          "Id": 17
+      },
+      "Id": 247
+  },
+  {
+      "Descritivo": "Chamusca",
+      "IdDistrito": 14,
+      "Distrito": {
+          "Descritivo": "Santarém",
+          "Id": 14
+      },
+      "Id": 205
+  },
+  {
+      "Descritivo": "Celorico de Basto",
+      "IdDistrito": 3,
+      "Distrito": {
+          "Descritivo": "Braga",
+          "Id": 3
+      },
+      "Id": 38
+  },
+  {
+      "Descritivo": "Celorico da Beira",
+      "IdDistrito": 9,
+      "Distrito": {
+          "Descritivo": "Guarda",
+          "Id": 9
+      },
+      "Id": 122
+  },
+  {
+      "Descritivo": "Castro Verde",
+      "IdDistrito": 2,
+      "Distrito": {
+          "Descritivo": "Beja",
+          "Id": 2
+      },
+      "Id": 25
+  },
+  {
+      "Descritivo": "Castro Marim",
+      "IdDistrito": 8,
+      "Distrito": {
+          "Descritivo": "Faro",
+          "Id": 8
+      },
+      "Id": 107
+  },
+  {
+      "Descritivo": "Castro Daire",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 261
+  },
+  {
+      "Descritivo": "Castelo de Vide",
+      "IdDistrito": 12,
+      "Distrito": {
+          "Descritivo": "Portalegre",
+          "Id": 12
+      },
+      "Id": 170
+  },
+  {
+      "Descritivo": "Castelo de Paiva",
+      "IdDistrito": 1,
+      "Distrito": {
+          "Descritivo": "Aveiro",
+          "Id": 1
+      },
+      "Id": 6
+  },
+  {
+      "Descritivo": "Castelo Branco",
+      "IdDistrito": 5,
+      "Distrito": {
+          "Descritivo": "Castelo Branco",
+          "Id": 5
+      },
+      "Id": 63
+  },
+  {
+      "Descritivo": "Castanheira de Pêra",
+      "IdDistrito": 10,
+      "Distrito": {
+          "Descritivo": "Leiria",
+          "Id": 10
+      },
+      "Id": 140
+  },
+  {
+      "Descritivo": "Cascais",
+      "IdDistrito": 11,
+      "Distrito": {
+          "Descritivo": "Lisboa",
+          "Id": 11
+      },
+      "Id": 155
+  },
+  {
+      "Descritivo": "Cartaxo",
+      "IdDistrito": 14,
+      "Distrito": {
+          "Descritivo": "Santarém",
+          "Id": 14
+      },
+      "Id": 204
+  },
+  {
+      "Descritivo": "Carregal do Sal",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 260
+  },
+  {
+      "Descritivo": "Carrazeda de Ansiães",
+      "IdDistrito": 4,
+      "Distrito": {
+          "Descritivo": "Bragança",
+          "Id": 4
+      },
+      "Id": 52
+  },
+  {
+      "Descritivo": "Cantanhede",
+      "IdDistrito": 6,
+      "Distrito": {
+          "Descritivo": "Coimbra",
+          "Id": 6
+      },
+      "Id": 74
+  },
+  {
+      "Descritivo": "Campo Maior",
+      "IdDistrito": 12,
+      "Distrito": {
+          "Descritivo": "Portalegre",
+          "Id": 12
+      },
+      "Id": 169
+  },
+  {
+      "Descritivo": "Caminha",
+      "IdDistrito": 16,
+      "Distrito": {
+          "Descritivo": "Viana do Castelo",
+          "Id": 16
+      },
+      "Id": 234
+  },
+  {
+      "Descritivo": "Caldas da Rainha",
+      "IdDistrito": 10,
+      "Distrito": {
+          "Descritivo": "Leiria",
+          "Id": 10
+      },
+      "Id": 139
+  },
+  {
+      "Descritivo": "Cadaval",
+      "IdDistrito": 11,
+      "Distrito": {
+          "Descritivo": "Lisboa",
+          "Id": 11
+      },
+      "Id": 154
+  },
+  {
+      "Descritivo": "Cabeceiras de Basto",
+      "IdDistrito": 3,
+      "Distrito": {
+          "Descritivo": "Braga",
+          "Id": 3
+      },
+      "Id": 37
+  },
+  {
+      "Descritivo": "Bragança",
+      "IdDistrito": 4,
+      "Distrito": {
+          "Descritivo": "Bragança",
+          "Id": 4
+      },
+      "Id": 51
+  },
+  {
+      "Descritivo": "Braga",
+      "IdDistrito": 3,
+      "Distrito": {
+          "Descritivo": "Braga",
+          "Id": 3
+      },
+      "Id": 36
+  },
+  {
+      "Descritivo": "Boticas",
+      "IdDistrito": 17,
+      "Distrito": {
+          "Descritivo": "Vila Real",
+          "Id": 17
+      },
+      "Id": 246
+  },
+  {
+      "Descritivo": "Borba",
+      "IdDistrito": 7,
+      "Distrito": {
+          "Descritivo": "Évora",
+          "Id": 7
+      },
+      "Id": 92
+  },
+  {
+      "Descritivo": "Bombarral",
+      "IdDistrito": 10,
+      "Distrito": {
+          "Descritivo": "Leiria",
+          "Id": 10
+      },
+      "Id": 138
+  },
+  {
+      "Descritivo": "Benavente",
+      "IdDistrito": 14,
+      "Distrito": {
+          "Descritivo": "Santarém",
+          "Id": 14
+      },
+      "Id": 203
+  },
+  {
+      "Descritivo": "Belmonte",
+      "IdDistrito": 5,
+      "Distrito": {
+          "Descritivo": "Castelo Branco",
+          "Id": 5
+      },
+      "Id": 62
+  },
+  {
+      "Descritivo": "Beja",
+      "IdDistrito": 2,
+      "Distrito": {
+          "Descritivo": "Beja",
+          "Id": 2
+      },
+      "Id": 24
+  },
+  {
+      "Descritivo": "Batalha",
+      "IdDistrito": 10,
+      "Distrito": {
+          "Descritivo": "Leiria",
+          "Id": 10
+      },
+      "Id": 137
+  },
+  {
+      "Descritivo": "Barreiro",
+      "IdDistrito": 15,
+      "Distrito": {
+          "Descritivo": "Setúbal",
+          "Id": 15
+      },
+      "Id": 223
+  },
+  {
+      "Descritivo": "Barrancos",
+      "IdDistrito": 2,
+      "Distrito": {
+          "Descritivo": "Beja",
+          "Id": 2
+      },
+      "Id": 23
+  },
+  {
+      "Descritivo": "Barcelos",
+      "IdDistrito": 3,
+      "Distrito": {
+          "Descritivo": "Braga",
+          "Id": 3
+      },
+      "Id": 35
+  },
+  {
+      "Descritivo": "Baião",
+      "IdDistrito": 13,
+      "Distrito": {
+          "Descritivo": "Porto",
+          "Id": 13
+      },
+      "Id": 182
+  },
+  {
+      "Descritivo": "Azambuja",
+      "IdDistrito": 11,
+      "Distrito": {
+          "Descritivo": "Lisboa",
+          "Id": 11
+      },
+      "Id": 153
+  },
+  {
+      "Descritivo": "Avis",
+      "IdDistrito": 12,
+      "Distrito": {
+          "Descritivo": "Portalegre",
+          "Id": 12
+      },
+      "Id": 168
+  },
+  {
+      "Descritivo": "Aveiro",
+      "IdDistrito": 1,
+      "Distrito": {
+          "Descritivo": "Aveiro",
+          "Id": 1
+      },
+      "Id": 5
+  },
+  {
+      "Descritivo": "Arruda dos Vinhos",
+      "IdDistrito": 11,
+      "Distrito": {
+          "Descritivo": "Lisboa",
+          "Id": 11
+      },
+      "Id": 152
+  },
+  {
+      "Descritivo": "Arronches",
+      "IdDistrito": 12,
+      "Distrito": {
+          "Descritivo": "Portalegre",
+          "Id": 12
+      },
+      "Id": 167
+  },
+  {
+      "Descritivo": "Arraiolos",
+      "IdDistrito": 7,
+      "Distrito": {
+          "Descritivo": "Évora",
+          "Id": 7
+      },
+      "Id": 91
+  },
+  {
+      "Descritivo": "Arouca",
+      "IdDistrito": 1,
+      "Distrito": {
+          "Descritivo": "Aveiro",
+          "Id": 1
+      },
+      "Id": 4
+  },
+  {
+      "Descritivo": "Armamar",
+      "IdDistrito": 18,
+      "Distrito": {
+          "Descritivo": "Viseu",
+          "Id": 18
+      },
+      "Id": 259
+  },
+  {
+      "Descritivo": "Arganil",
+      "IdDistrito": 6,
+      "Distrito": {
+          "Descritivo": "Coimbra",
+          "Id": 6
+      },
+      "Id": 73
+  },
+  {
+      "Descritivo": "Arcos de Valdevez",
+      "IdDistrito": 16,
+      "Distrito": {
+          "Descritivo": "Viana do Castelo",
+          "Id": 16
+      },
+      "Id": 233
+  },
+  {
+      "Descritivo": "Ansião",
+      "IdDistrito": 10,
+      "Distrito": {
+          "Descritivo": "Leiria",
+          "Id": 10
+      },
+      "Id": 136
+  },
+  {
+      "Descritivo": "Anadia",
+      "IdDistrito": 1,
+      "Distrito": {
+          "Descritivo": "Aveiro",
+          "Id": 1
+      },
+      "Id": 3
+  },
+  {
+      "Descritivo": "Amares",
+      "IdDistrito": 3,
+      "Distrito": {
+          "Descritivo": "Braga",
+          "Id": 3
+      },
+      "Id": 34
+  },
+  {
+      "Descritivo": "Amarante",
+      "IdDistrito": 13,
+      "Distrito": {
+          "Descritivo": "Porto",
+          "Id": 13
+      },
+      "Id": 181
+  },
+  {
+      "Descritivo": "Amadora",
+      "IdDistrito": 11,
+      "Distrito": {
+          "Descritivo": "Lisboa",
+          "Id": 11
+      },
+      "Id": 151
+  },
+  {
+      "Descritivo": "Alvito",
+      "IdDistrito": 2,
+      "Distrito": {
+          "Descritivo": "Beja",
+          "Id": 2
+      },
+      "Id": 22
+  },
+  {
+      "Descritivo": "Alvaiázere",
+      "IdDistrito": 10,
+      "Distrito": {
+          "Descritivo": "Leiria",
+          "Id": 10
+      },
+      "Id": 135
+  },
+  {
+      "Descritivo": "Alter do Chão",
+      "IdDistrito": 12,
+      "Distrito": {
+          "Descritivo": "Portalegre",
+          "Id": 12
+      },
+      "Id": 166
+  },
+  {
+      "Descritivo": "Alpiarça",
+      "IdDistrito": 14,
+      "Distrito": {
+          "Descritivo": "Santarém",
+          "Id": 14
+      },
+      "Id": 202
+  },
+  {
+      "Descritivo": "Almodôvar",
+      "IdDistrito": 2,
+      "Distrito": {
+          "Descritivo": "Beja",
+          "Id": 2
+      },
+      "Id": 21
+  },
+  {
+      "Descritivo": "Almeirim",
+      "IdDistrito": 14,
+      "Distrito": {
+          "Descritivo": "Santarém",
+          "Id": 14
+      },
+      "Id": 201
+  },
+  {
+      "Descritivo": "Almeida",
+      "IdDistrito": 9,
+      "Distrito": {
+          "Descritivo": "Guarda",
+          "Id": 9
+      },
+      "Id": 121
+  },
+  {
+      "Descritivo": "Almada",
+      "IdDistrito": 15,
+      "Distrito": {
+          "Descritivo": "Setúbal",
+          "Id": 15
+      },
+      "Id": 222
+  },
+  {
+      "Descritivo": "Aljustrel",
+      "IdDistrito": 2,
+      "Distrito": {
+          "Descritivo": "Beja",
+          "Id": 2
+      },
+      "Id": 20
+  },
+  {
+      "Descritivo": "Aljezur",
+      "IdDistrito": 8,
+      "Distrito": {
+          "Descritivo": "Faro",
+          "Id": 8
+      },
+      "Id": 106
+  },
+  {
+      "Descritivo": "Alijó",
+      "IdDistrito": 17,
+      "Distrito": {
+          "Descritivo": "Vila Real",
+          "Id": 17
+      },
+      "Id": 245
+  },
+  {
+      "Descritivo": "Alfândega da Fé",
+      "IdDistrito": 4,
+      "Distrito": {
+          "Descritivo": "Bragança",
+          "Id": 4
+      },
+      "Id": 50
+  },
+  {
+      "Descritivo": "Alenquer",
+      "IdDistrito": 11,
+      "Distrito": {
+          "Descritivo": "Lisboa",
+          "Id": 11
+      },
+      "Id": 150
+  },
+  {
+      "Descritivo": "Alcoutim",
+      "IdDistrito": 8,
+      "Distrito": {
+          "Descritivo": "Faro",
+          "Id": 8
+      },
+      "Id": 105
+  },
+  {
+      "Descritivo": "Alcochete",
+      "IdDistrito": 15,
+      "Distrito": {
+          "Descritivo": "Setúbal",
+          "Id": 15
+      },
+      "Id": 221
+  },
+  {
+      "Descritivo": "Alcobaça",
+      "IdDistrito": 10,
+      "Distrito": {
+          "Descritivo": "Leiria",
+          "Id": 10
+      },
+      "Id": 134
+  },
+  {
+      "Descritivo": "Alcanena",
+      "IdDistrito": 14,
+      "Distrito": {
+          "Descritivo": "Santarém",
+          "Id": 14
+      },
+      "Id": 200
+  },
+  {
+      "Descritivo": "Alcácer do Sal",
+      "IdDistrito": 15,
+      "Distrito": {
+          "Descritivo": "Setúbal",
+          "Id": 15
+      },
+      "Id": 220
+  },
+  {
+      "Descritivo": "Albufeira",
+      "IdDistrito": 8,
+      "Distrito": {
+          "Descritivo": "Faro",
+          "Id": 8
+      },
+      "Id": 104
+  },
+  {
+      "Descritivo": "Albergaria-a-Velha",
+      "IdDistrito": 1,
+      "Distrito": {
+          "Descritivo": "Aveiro",
+          "Id": 1
+      },
+      "Id": 2
+  },
+  {
+      "Descritivo": "Alandroal",
+      "IdDistrito": 7,
+      "Distrito": {
+          "Descritivo": "Évora",
+          "Id": 7
+      },
+      "Id": 90
+  },
+  {
+      "Descritivo": "Aguiar da Beira",
+      "IdDistrito": 9,
+      "Distrito": {
+          "Descritivo": "Guarda",
+          "Id": 9
+      },
+      "Id": 120
+  },
+  {
+      "Descritivo": "Águeda",
+      "IdDistrito": 1,
+      "Distrito": {
+          "Descritivo": "Aveiro",
+          "Id": 1
+      },
+      "Id": 1
+  },
+  {
+      "Descritivo": "Abrantes",
+      "IdDistrito": 14,
+      "Distrito": {
+          "Descritivo": "Santarém",
+          "Id": 14
+      },
+      "Id": 199
+  }
+]

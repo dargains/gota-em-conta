@@ -1,0 +1,274 @@
+[
+  {
+      "Descritivo": "AGIP",
+      "Id": 1
+  },
+  {
+      "Descritivo": "ALVES BANDEIRA",
+      "Id": 2
+  },
+  {
+      "Descritivo": "ANIBAL ANTUNES BANDEIRA",
+      "Id": 3
+  },
+  {
+      "Descritivo": "ATLANTIC OIL",
+      "Id": 4
+  },
+  {
+      "Descritivo": "AUCHAN",
+      "Id": 5
+  },
+  {
+      "Descritivo": "AUTO JULIO",
+      "Id": 6
+  },
+  {
+      "Descritivo": "AVIA",
+      "Id": 7
+  },
+  {
+      "Descritivo": "AZORIA",
+      "Id": 8
+  },
+  {
+      "Descritivo": "BEQ",
+      "Id": 9
+  },
+  {
+      "Descritivo": "BOMBAGÁS",
+      "Id": 10
+  },
+  {
+      "Descritivo": "BP",
+      "Id": 11
+  },
+  {
+      "Descritivo": "BXPRESS",
+      "Id": 12
+  },
+  {
+      "Descritivo": "CARLOS BALTAZAR",
+      "Id": 13
+  },
+  {
+      "Descritivo": "CARRASQUINHO & FILHOS",
+      "Id": 14
+  },
+  {
+      "Descritivo": "CEPSA",
+      "Id": 15
+  },
+  {
+      "Descritivo": "CIDADE N'ALDEIA",
+      "Id": 16
+  },
+  {
+      "Descritivo": "CIPOL",
+      "Id": 17
+  },
+  {
+      "Descritivo": "CONTINENTE",
+      "Id": 18
+  },
+  {
+      "Descritivo": "CREIXOAUTO",
+      "Id": 19
+  },
+  {
+      "Descritivo": "DOUROGAS NATURAL",
+      "Id": 20
+  },
+  {
+      "Descritivo": "DPC",
+      "Id": 21
+  },
+  {
+      "Descritivo": "DPP",
+      "Id": 22
+  },
+  {
+      "Descritivo": "ECOBRENT",
+      "Id": 23
+  },
+  {
+      "Descritivo": "ECOMARCHÉ",
+      "Id": 24
+  },
+  {
+      "Descritivo": "ESSO",
+      "Id": 25
+  },
+  {
+      "Descritivo": "ETC",
+      "Id": 26
+  },
+  {
+      "Descritivo": "FG COMBUSTÍVEIS",
+      "Id": 67
+  },
+  {
+      "Descritivo": "FREITAS",
+      "Id": 27
+  },
+  {
+      "Descritivo": "FUELTEJO",
+      "Id": 28
+  },
+  {
+      "Descritivo": "GALP",
+      "Id": 29
+  },
+  {
+      "Descritivo": "GAPOR",
+      "Id": 30
+  },
+  {
+      "Descritivo": "GASOLAR",
+      "Id": 31
+  },
+  {
+      "Descritivo": "GASPE",
+      "Id": 32
+  },
+  {
+      "Descritivo": "GASPROCAR",
+      "Id": 33
+  },
+  {
+      "Descritivo": "G-ENERGY",
+      "Id": 34
+  },
+  {
+      "Descritivo": "Genérico",
+      "Id": 35
+  },
+  {
+      "Descritivo": "GOTA",
+      "Id": 36
+  },
+  {
+      "Descritivo": "ILÍDIO MOTA",
+      "Id": 37
+  },
+  {
+      "Descritivo": "INTERMARCHÉ",
+      "Id": 38
+  },
+  {
+      "Descritivo": "JUMBO",
+      "Id": 39
+  },
+  {
+      "Descritivo": "LECLERC",
+      "Id": 40
+  },
+  {
+      "Descritivo": "LUBRIDÃO",
+      "Id": 41
+  },
+  {
+      "Descritivo": "LUSIADAGÁS",
+      "Id": 42
+  },
+  {
+      "Descritivo": "OFIMAQ",
+      "Id": 43
+  },
+  {
+      "Descritivo": "OLEOFAT",
+      "Id": 44
+  },
+  {
+      "Descritivo": "OZ Energia",
+      "Id": 45
+  },
+  {
+      "Descritivo": "PETRIN",
+      "Id": 46
+  },
+  {
+      "Descritivo": "PETRO BASTO",
+      "Id": 47
+  },
+  {
+      "Descritivo": "PETROALVA",
+      "Id": 48
+  },
+  {
+      "Descritivo": "PETROIBÉRICA",
+      "Id": 49
+  },
+  {
+      "Descritivo": "PETROVARIANTE",
+      "Id": 50
+  },
+  {
+      "Descritivo": "PETROVAZ",
+      "Id": 51
+  },
+  {
+      "Descritivo": "PINGO DOCE",
+      "Id": 52
+  },
+  {
+      "Descritivo": "PRIO",
+      "Id": 53
+  },
+  {
+      "Descritivo": "Q8",
+      "Id": 54
+  },
+  {
+      "Descritivo": "RECHEIO",
+      "Id": 55
+  },
+  {
+      "Descritivo": "REDE ENERGIA",
+      "Id": 56
+  },
+  {
+      "Descritivo": "REDIL",
+      "Id": 57
+  },
+  {
+      "Descritivo": "REPSOL",
+      "Id": 58
+  },
+  {
+      "Descritivo": "SCAM",
+      "Id": 59
+  },
+  {
+      "Descritivo": "SHELL",
+      "Id": 60
+  },
+  {
+      "Descritivo": "SOPOR",
+      "Id": 61
+  },
+  {
+      "Descritivo": "TFUEL",
+      "Id": 62
+  },
+  {
+      "Descritivo": "TRANSFORPEL",
+      "Id": 63
+  },
+  {
+      "Descritivo": "TRAVESSO",
+      "Id": 64
+  },
+  {
+      "Descritivo": "TUACAR",
+      "Id": 65
+  },
+  {
+      "Descritivo": "VALCARCE",
+      "Id": 68
+  },
+  {
+      "Descritivo": "VIBAGÁS",
+      "Id": 66
+  }
+]
