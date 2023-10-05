@@ -1,32 +1,13 @@
 import React, {useState, useEffect, useCallback, memo} from 'react'
-import { GoogleMap, useLoadScript, MarkerF } from '@react-google-maps/api';
-import icon from '../assets/icons/icon.svg'
-
-const containerStyle = {
-  width: '100%',
-  height: '600px'
-};
-
-const defaultMapProps = {
-  center: {
-    lat: 38.706892,
-    lng: -9.304544
-  },
-  zoom: 12
-};
-
-const MapItem = ({lat, lng, text}) => {
-  return (
-    <MarkerF position={{lat, lng}} label={text} icon={icon}/>
-  )
-}
+import { GoogleMap, useLoadScript } from '@react-google-maps/api';
+import MapItem from './MapItem';
 
 function Map({items}) {
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.MAPS_API_KEY
-  })
-
   const [map, setMap] = useState(null)
+  const { isLoaded } = useLoadScript({
+    // googleMapsApiKey: process.env.MAPS_API_KEY
+    googleMapsApiKey: "AIzaSyAcMrGLpT5OAMiZHeXfWHWixU-Ds2p7Izw"
+  })
 
   const onLoad = useCallback(function callback(map) {
     // todo calculate bounds
@@ -58,19 +39,19 @@ function Map({items}) {
       map.fitBounds(bounds);
     }
   }, [items])
-  
 
   return isLoaded ? (
       <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={defaultMapProps.center}
-        zoom={defaultMapProps.zoom}
+        mapContainerStyle={{
+          width: '100%',
+          height: '800px'
+        }}
         onLoad={onLoad}
         onUnmount={onUnmount}
       >
-        {items.map(item => <MapItem key={item.Id} lat={item.Latitude} lng={item.Longitude} text={item.Preco} />)}
+        {items.map(({Id, Latitude, Longitude, Preco}) => <MapItem key={Id} lat={Latitude} lng={Longitude} text={Preco} />)}
       </GoogleMap>
-  ) : <p>loading...</p>
+  ) : <p>A carregar mapa...</p>
 }
 
 export default memo(Map)
