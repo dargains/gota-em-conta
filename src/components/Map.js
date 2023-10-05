@@ -25,6 +25,18 @@ function Map({ items }) {
     setMap(null);
   }, []);
 
+  const renderMarkers = () => {
+    return items.map(({ Id, Latitude, Longitude, Preco }, index) => (
+      <MapItem
+        key={Id}
+        lat={Latitude}
+        lng={Longitude}
+        text={Preco}
+        order={(index + 1) / items.length}
+      />
+    ));
+  };
+
   useEffect(() => {
     if (map) {
       const bounds = new window.google.maps.LatLngBounds();
@@ -47,9 +59,7 @@ function Map({ items }) {
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
-      {items.map(({ Id, Latitude, Longitude, Preco }) => (
-        <MapItem key={Id} lat={Latitude} lng={Longitude} text={Preco} />
-      ))}
+      {renderMarkers()}
     </GoogleMap>
   ) : (
     <p>A carregar mapa...</p>
