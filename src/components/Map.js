@@ -1,18 +1,16 @@
-import React, {useState, useEffect, useCallback, memo} from 'react'
-import { GoogleMap, useLoadScript } from '@react-google-maps/api';
-import MapItem from './MapItem';
+import React, { useState, useEffect, useCallback, memo } from "react";
+import { GoogleMap, useLoadScript } from "@react-google-maps/api";
+import MapItem from "./MapItem";
 
-function Map({items}) {
-  const [map, setMap] = useState(null)
+function Map({ items }) {
+  const [map, setMap] = useState(null);
   const { isLoaded } = useLoadScript({
-    // googleMapsApiKey: process.env.MAPS_API_KEY
-    googleMapsApiKey: "AIzaSyAcMrGLpT5OAMiZHeXfWHWixU-Ds2p7Izw"
-  })
+    googleMapsApiKey: process.env.MAPS_API_KEY,
+  });
 
   const onLoad = useCallback(function callback(map) {
-    // todo calculate bounds
     const bounds = new window.google.maps.LatLngBounds();
-    items.map(item => {
+    items.map((item) => {
       bounds.extend({
         lat: item.Latitude,
         lng: item.Longitude,
@@ -20,17 +18,17 @@ function Map({items}) {
     });
     map.fitBounds(bounds);
 
-    setMap(map)
-  }, [])
+    setMap(map);
+  }, []);
 
   const onUnmount = useCallback(function callback(map) {
-    setMap(null)
-  }, [])
+    setMap(null);
+  }, []);
 
   useEffect(() => {
     if (map) {
       const bounds = new window.google.maps.LatLngBounds();
-      items.map(item => {
+      items.map((item) => {
         bounds.extend({
           lat: item.Latitude,
           lng: item.Longitude,
@@ -38,20 +36,24 @@ function Map({items}) {
       });
       map.fitBounds(bounds);
     }
-  }, [items])
+  }, [items]);
 
   return isLoaded ? (
-      <GoogleMap
-        mapContainerStyle={{
-          width: '100%',
-          height: '800px'
-        }}
-        onLoad={onLoad}
-        onUnmount={onUnmount}
-      >
-        {items.map(({Id, Latitude, Longitude, Preco}) => <MapItem key={Id} lat={Latitude} lng={Longitude} text={Preco} />)}
-      </GoogleMap>
-  ) : <p>A carregar mapa...</p>
+    <GoogleMap
+      mapContainerStyle={{
+        width: "100%",
+        height: "800px",
+      }}
+      onLoad={onLoad}
+      onUnmount={onUnmount}
+    >
+      {items.map(({ Id, Latitude, Longitude, Preco }) => (
+        <MapItem key={Id} lat={Latitude} lng={Longitude} text={Preco} />
+      ))}
+    </GoogleMap>
+  ) : (
+    <p>A carregar mapa...</p>
+  );
 }
 
-export default memo(Map)
+export default memo(Map);

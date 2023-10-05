@@ -1,74 +1,74 @@
 [
   {
-      "Descritivo": "Aveiro",
-      "Id": 1
+    "Descritivo": "Aveiro",
+    "Id": 1
   },
   {
-      "Descritivo": "Beja",
-      "Id": 2
+    "Descritivo": "Beja",
+    "Id": 2
   },
   {
-      "Descritivo": "Braga",
-      "Id": 3
+    "Descritivo": "Braga",
+    "Id": 3
   },
   {
-      "Descritivo": "Bragança",
-      "Id": 4
+    "Descritivo": "Bragança",
+    "Id": 4
   },
   {
-      "Descritivo": "Castelo Branco",
-      "Id": 5
+    "Descritivo": "Castelo Branco",
+    "Id": 5
   },
   {
-      "Descritivo": "Coimbra",
-      "Id": 6
+    "Descritivo": "Coimbra",
+    "Id": 6
   },
   {
-      "Descritivo": "Évora",
-      "Id": 7
+    "Descritivo": "Évora",
+    "Id": 7
   },
   {
-      "Descritivo": "Faro",
-      "Id": 8
+    "Descritivo": "Faro",
+    "Id": 8
   },
   {
-      "Descritivo": "Guarda",
-      "Id": 9
+    "Descritivo": "Guarda",
+    "Id": 9
   },
   {
-      "Descritivo": "Leiria",
-      "Id": 10
+    "Descritivo": "Leiria",
+    "Id": 10
   },
   {
-      "Descritivo": "Lisboa",
-      "Id": 11
+    "Descritivo": "Lisboa",
+    "Id": 11
   },
   {
-      "Descritivo": "Portalegre",
-      "Id": 12
+    "Descritivo": "Portalegre",
+    "Id": 12
   },
   {
-      "Descritivo": "Porto",
-      "Id": 13
+    "Descritivo": "Porto",
+    "Id": 13
   },
   {
-      "Descritivo": "Santarém",
-      "Id": 14
+    "Descritivo": "Santarém",
+    "Id": 14
   },
   {
-      "Descritivo": "Setúbal",
-      "Id": 15
+    "Descritivo": "Setúbal",
+    "Id": 15
   },
   {
-      "Descritivo": "Viana do Castelo",
-      "Id": 16
+    "Descritivo": "Viana do Castelo",
+    "Id": 16
   },
   {
-      "Descritivo": "Vila Real",
-      "Id": 17
+    "Descritivo": "Vila Real",
+    "Id": 17
   },
   {
-      "Descritivo": "Viseu",
-      "Id": 18
+    "Descritivo": "Viseu",
+    "Id": 18
   }
 ]
