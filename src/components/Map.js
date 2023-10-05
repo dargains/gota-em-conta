@@ -2,6 +2,11 @@ import React, { useState, useEffect, useCallback, memo } from "react";
 import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 import MapItem from "./MapItem";
 
+function getColor(value) {
+  var hue = ((1 - value) * 120).toString(10);
+  return ["hsl(", hue, ",100%,50%)"].join("");
+}
+
 function Map({ items }) {
   const [map, setMap] = useState(null);
   const { isLoaded } = useLoadScript({
@@ -25,17 +30,15 @@ function Map({ items }) {
     setMap(null);
   }, []);
 
-  const renderMarkers = () => {
-    return items.map(({ Id, Latitude, Longitude, Preco }, index) => (
-      <MapItem
-        key={Id}
-        lat={Latitude}
-        lng={Longitude}
-        text={Preco}
-        order={(index + 1) / items.length}
-      />
-    ));
-  };
+  const renderMarkers = () => items.map(({ Id, Latitude, Longitude, Preco }, index) => (
+    <MapItem
+      key={Id}
+      lat={Latitude}
+      lng={Longitude}
+      text={Preco}
+      color={getColor((index + 1) / items.length)}
+    />
+  ));
 
   useEffect(() => {
     if (map) {
