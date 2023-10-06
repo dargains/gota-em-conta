@@ -10,7 +10,7 @@ function getColor(value) {
 function Map({ items }) {
   const [map, setMap] = useState(null);
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.MAPS_API_KEY,
+    googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY,
   });
 
   const onLoad = useCallback(function callback(map) {
@@ -30,15 +30,16 @@ function Map({ items }) {
     setMap(null);
   }, []);
 
-  const renderMarkers = () => items.map(({ Id, Latitude, Longitude, Preco }, index) => (
-    <MapItem
-      key={Id}
-      lat={Latitude}
-      lng={Longitude}
-      text={Preco}
-      color={getColor((index + 1) / items.length)}
-    />
-  ));
+  const renderMarkers = () =>
+    items.map(({ Id, Latitude, Longitude, Preco }, index) => (
+      <MapItem
+        key={Id}
+        lat={Latitude}
+        lng={Longitude}
+        text={Preco}
+        color={getColor((index + 1) / items.length)}
+      />
+    ));
 
   useEffect(() => {
     if (map) {
