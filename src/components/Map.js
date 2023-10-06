@@ -33,7 +33,7 @@ function Map({ items }) {
         lat={Latitude}
         lng={Longitude}
         text={Preco}
-        color={getColor((index + 1) / items.length)}
+        color={getColor(index / items.length)}
       />
     ));
 
