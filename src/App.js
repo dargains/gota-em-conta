@@ -56,12 +56,16 @@ function App() {
     axios.get(url).then(({ data }) => {
       if (data.status) {
         data.resultado.forEach((item) => {
-          if (item.Marca === "GALP") {
-            item.Preco =
-              (
-                parseFloat(item.Preco.replace(" €", "").replace(",", ".")) - 0.1
-              ).toFixed(3) + " €";
-          }
+          item.Preco =
+            parseFloat(item.Preco.replace(" €", "").replace(",", ".")).toFixed(
+              2
+            ) + " €";
+          // if (item.Marca === "GALP") {
+          //   item.Preco =
+          //     (
+          //       parseFloat(item.Preco.replace(" €", "").replace(",", ".")) - 0.1
+          //     ).toFixed(2) + " €";
+          // }
         });
         const uniqueResults = data.resultado.reduce((accumulator, current) => {
           if (!accumulator.find((item) => item.Id === current.Id)) {
