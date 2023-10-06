@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 import axios from "axios";
+
 import Map from "./components/Map";
+import SelectItem from "./components/SelectItem";
 
 import fuelTypesJson from "./assets/data/fuelTypes.json";
 import brandsJson from "./assets/data/brands.json";
 import districtsJson from "./assets/data/districts.json";
 import citiesJson from "./assets/data/cities.json";
-import SelectItem from "./components/SelectItem";
 
-axios.defaults.baseURL = "https://precoscombustiveis.dgeg.gov.pt/api/PrecoComb";
+import { alpha } from "./helpers";
+import "./App.css";
 
 const initialSelection = {
   fuelTypes: "3201",
@@ -17,8 +18,6 @@ const initialSelection = {
   districts: "",
   cities: "",
 };
-
-const alpha = (a, b) => a.Descritivo.localeCompare(b.Descritivo);
 
 function App() {
   const [fuelTypes, setFuelTypes] = useState([]);
@@ -56,6 +55,14 @@ function App() {
     const url = `/PesquisarPostos?idsTiposComb=${currentSelection.fuelTypes}&idMarca=${currentSelection.brands}&idTipoPosto=&idDistrito=${currentSelection.districts}&idsMunicipios=${currentSelection.cities}&qtdPorPagina=500`;
     axios.get(url).then(({ data }) => {
       if (data.status) {
+        data.resultado.forEach((item) => {
+          if (item.Marca === "GALP") {
+            item.Preco =
+              (
+                parseFloat(item.Preco.replace(" €", "").replace(",", ".")) - 0.1
+              ).toFixed(3) + " €";
+          }
+        });
         const uniqueResults = data.resultado.reduce((accumulator, current) => {
           if (!accumulator.find((item) => item.Id === current.Id)) {
             accumulator.push(current);
