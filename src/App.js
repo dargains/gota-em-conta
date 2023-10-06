@@ -7,6 +7,7 @@ import fuelTypesJson from "./assets/data/fuelTypes.json";
 import brandsJson from "./assets/data/brands.json";
 import districtsJson from "./assets/data/districts.json";
 import citiesJson from "./assets/data/cities.json";
+import SelectItem from "./components/SelectItem";
 
 axios.defaults.baseURL = "https://precoscombustiveis.dgeg.gov.pt/api/PrecoComb";
 
@@ -33,18 +34,6 @@ function App() {
     setFuelTypes(fuelTypesJson);
     setBrands(brandsJson);
     setDistricts(districtsJson);
-    // axios.get('/GetTiposCombustiveis')
-    // .then(({data:{resultado}}) => {
-    //   setFuelTypes(resultado)
-    // })
-    // axios.get('/GetMarcas')
-    // .then(({data:{resultado}}) => {
-    //   setBrands(resultado)
-    // })
-    // axios.get('/GetDistritos')
-    // .then(({data:{resultado}}) => {
-    //   setDistricts(resultado)
-    // })
   }, []);
 
   const selectItem = ({ target: { name, value } }) => {
@@ -60,10 +49,6 @@ function App() {
         .filter((city) => city.IdDistrito === parseInt(value))
         .sort(alpha);
       setCities(districtCities);
-      // axios.get(`/GetMunicipios?idDistrito=${value}`)
-      // .then(({data:{resultado}}) => {
-      //   setCities(resultado.sort(alpha))
-      // })
     }
   };
 
@@ -89,50 +74,30 @@ function App() {
   return (
     <div className="App">
       <section>
-        <div>
-          <label htmlFor="fuelTypes">Tipo de Combustível</label>
-          <select name="fuelTypes" id="fuelTypes" onChange={selectItem}>
-            <option value="">Qualquer um</option>
-            {fuelTypes.map((item) => (
-              <option key={item.Id} value={item.Id}>
-                {item.Descritivo}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div>
-          <label htmlFor="brands">Marca</label>
-          <select name="brands" id="brands" onChange={selectItem}>
-            <option value="">Qualquer um</option>
-            {brands.map((item) => (
-              <option key={item.Id} value={item.Id}>
-                {item.Descritivo}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div>
-          <label htmlFor="districts">Distrito</label>
-          <select name="districts" id="districts" onChange={selectItem}>
-            <option value="">Qualquer um</option>
-            {districts.map((item) => (
-              <option key={item.Id} value={item.Id}>
-                {item.Descritivo}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div>
-          <label htmlFor="cities">Município</label>
-          <select name="cities" id="cities" onChange={selectItem}>
-            <option value="">Qualquer um</option>
-            {cities.map((item) => (
-              <option key={item.Id} value={item.Id}>
-                {item.Descritivo}
-              </option>
-            ))}
-          </select>
-        </div>
+        <SelectItem
+          label="Tipo de Combustível"
+          id="fuelTypes"
+          items={fuelTypes}
+          onSelect={selectItem}
+        />
+        <SelectItem
+          label="Marca"
+          id="brands"
+          items={brands}
+          onSelect={selectItem}
+        />
+        <SelectItem
+          label="Distrito"
+          id="districts"
+          items={districts}
+          onSelect={selectItem}
+        />
+        <SelectItem
+          label="Município"
+          id="cities"
+          items={cities}
+          onSelect={selectItem}
+        />
         <button onClick={makeQuery}>procurar</button>
       </section>
 
