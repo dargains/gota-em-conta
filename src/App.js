@@ -89,38 +89,50 @@ function App() {
   return (
     <div className="App">
       <section>
-        <select name="fuelTypes" id="fuelTypes" onChange={selectItem}>
-          <option value="">Qualquer um</option>
-          {fuelTypes.map((item) => (
-            <option key={item.Id} value={item.Id}>
-              {item.Descritivo}
-            </option>
-          ))}
-        </select>
-        <select name="brands" id="brands" onChange={selectItem}>
-          <option value="">Qualquer um</option>
-          {brands.map((item) => (
-            <option key={item.Id} value={item.Id}>
-              {item.Descritivo}
-            </option>
-          ))}
-        </select>
-        <select name="districts" id="districts" onChange={selectItem}>
-          <option value="">Qualquer um</option>
-          {districts.map((item) => (
-            <option key={item.Id} value={item.Id}>
-              {item.Descritivo}
-            </option>
-          ))}
-        </select>
-        <select name="cities" id="cities" onChange={selectItem}>
-          <option value="">Qualquer um</option>
-          {cities.map((item) => (
-            <option key={item.Id} value={item.Id}>
-              {item.Descritivo}
-            </option>
-          ))}
-        </select>
+        <div>
+          <label htmlFor="fuelTypes">Tipo de Combustível</label>
+          <select name="fuelTypes" id="fuelTypes" onChange={selectItem}>
+            <option value="">Qualquer um</option>
+            {fuelTypes.map((item) => (
+              <option key={item.Id} value={item.Id}>
+                {item.Descritivo}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label htmlFor="brands">Marca</label>
+          <select name="brands" id="brands" onChange={selectItem}>
+            <option value="">Qualquer um</option>
+            {brands.map((item) => (
+              <option key={item.Id} value={item.Id}>
+                {item.Descritivo}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label htmlFor="districts">Distrito</label>
+          <select name="districts" id="districts" onChange={selectItem}>
+            <option value="">Qualquer um</option>
+            {districts.map((item) => (
+              <option key={item.Id} value={item.Id}>
+                {item.Descritivo}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label htmlFor="cities">Município</label>
+          <select name="cities" id="cities" onChange={selectItem}>
+            <option value="">Qualquer um</option>
+            {cities.map((item) => (
+              <option key={item.Id} value={item.Id}>
+                {item.Descritivo}
+              </option>
+            ))}
+          </select>
+        </div>
         <button onClick={makeQuery}>procurar</button>
       </section>
 
