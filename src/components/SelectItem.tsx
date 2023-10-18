@@ -12,7 +12,7 @@ interface SelectItemProps {
   onSelect: ({
     target: { name, value },
   }: {
-    target: { name: any; value: any };
+    target: { name: string; value: string };
   }) => void;
 }
 
