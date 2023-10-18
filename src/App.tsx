@@ -115,42 +115,39 @@ function App() {
     }
   };
 
-  const makeQuery = () => {
+  const makeQuery = async () => {
     const { fuelTypes, brands, districts, cities } = currentSelection;
     const url = `/PesquisarPostos?idsTiposComb=${fuelTypes}&idMarca=${brands}&idTipoPosto=&idDistrito=${districts}&idsMunicipios=${cities}&qtdPorPagina=5000`;
-    axios
-      .get(url)
-      .then(
-        ({
-          data: { resultado, status, mensagem },
-        }: {
-          data: { resultado: ResultItem[]; status: number; mensagem: string };
-        }) => {
-          if (status) {
-            resultado.forEach((item: ResultItem) => {
-              const preco = formatNumber(
-                parseFloat(item.Preco.replace(" €", "").replace(",", "."))
-              );
-              item.price = preco;
-              item.Preco = preco + " €";
+    const { data } = await axios.get(url);
+    const {
+      resultado,
+      status,
+      mensagem,
+    }: { resultado: ResultItem[]; status: boolean; mensagem: string } = data;
+    if (status) {
+      resultado.forEach((item: ResultItem) => {
+        // setting price with only two decimals
+        const preco = formatNumber(
+          parseFloat(item.Preco.replace(" €", "").replace(",", "."))
+        );
+        item.price = preco;
+        item.Preco = preco + " €";
 
-              // fixing inverted coordinates
-              if (item.Latitude < 37) {
-                const lat = item.Latitude;
-                item.Latitude = item.Longitude;
-                item.Longitude = lat;
-              }
-              setDiscount(item, "GALP", 0.15);
-            });
-            printValues(resultado);
-            setMessage("");
-            setResults(resultado);
-          } else {
-            setMessage(mensagem);
-            setResults([]);
-          }
+        // fixing inverted coordinates
+        if (item.Latitude < 37) {
+          const lat = item.Latitude;
+          item.Latitude = item.Longitude;
+          item.Longitude = lat;
         }
-      );
+        setDiscount(item, "GALP", 0.15);
+      });
+      printValues(resultado);
+      setMessage("");
+      setResults(resultado);
+    } else {
+      setMessage(mensagem);
+      setResults([]);
+    }
   };
 
   return (
