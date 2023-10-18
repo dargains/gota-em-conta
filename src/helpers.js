@@ -6,3 +6,10 @@ export const getColor = (value) => {
 };
 
 export const formatNumber = (number) => parseFloat(number.toFixed(2));
+
+export const getMedian = (items) => {
+  const total = items.reduce((accumulator, object) => {
+    return accumulator + object.price;
+  }, 0);
+  return formatNumber(total / items.length);
+};
