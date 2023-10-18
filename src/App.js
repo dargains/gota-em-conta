@@ -9,7 +9,7 @@ import brandsJson from "./assets/data/brands.json";
 import districtsJson from "./assets/data/districts.json";
 import citiesJson from "./assets/data/cities.json";
 
-import { alpha, formatNumber } from "./helpers";
+import { alpha, formatNumber, getMedian } from "./helpers";
 import "./App.css";
 
 const initialSelection = {
@@ -71,11 +71,34 @@ function App() {
     }
   };
 
-  const getMedian = (items) => {
-    const total = items.reduce((accumulator, object) => {
-      return accumulator + object.price;
-    }, 0);
-    return formatNumber(total / items.length);
+  const printValues = (resultado) => {
+    console.log("***");
+    const groups = resultado.reduce((groups, item) => {
+      const group = groups[item.Municipio] || [];
+      group.push(item);
+      groups[item.Municipio] = group;
+      return groups;
+    }, {});
+
+    let totalMedian = 0;
+    for (const city in groups) {
+      const cityMedian = getMedian(groups[city]);
+      totalMedian += cityMedian;
+      console.log(city, cityMedian, groups[city][0].Distrito);
+    }
+    console.log(
+      "media total: ",
+      formatNumber(totalMedian / Object.keys(groups).length)
+    );
+  };
+
+  const setDiscount = (item, brand, discount) => {
+    if (item.Marca === brand) {
+      item.Preco =
+        (
+          parseFloat(item.Preco.replace(" €", "").replace(",", ".")) - discount
+        ).toFixed(2) + " €";
+    }
   };
 
   const makeQuery = () => {
@@ -88,36 +111,16 @@ function App() {
           );
           item.price = preco;
           item.Preco = preco + " €";
+
+          // fixing inverted coordinates
           if (item.Latitude < 37) {
             const lat = item.Latitude;
             item.Latitude = item.Longitude;
             item.Longitude = lat;
           }
-          // if (item.Marca === "GALP") {
-          //   item.Preco =
-          //     (
-          //       parseFloat(item.Preco.replace(" €", "").replace(",", ".")) - 0.1
-          //     ).toFixed(2) + " €";
-          // }
+          setDiscount(item, "GALP", 0.15);
         });
-        console.log("***");
-        const groups = resultado.reduce((groups, item) => {
-          const group = groups[item.Municipio] || [];
-          group.push(item);
-          groups[item.Municipio] = group;
-          return groups;
-        }, {});
-
-        let totalMedian = 0;
-        for (const city in groups) {
-          const cityMedian = getMedian(groups[city]);
-          totalMedian += cityMedian;
-          console.log(city, cityMedian, groups[city][0].Distrito);
-        }
-        console.log(
-          "media total: ",
-          formatNumber(totalMedian / Object.keys(groups).length)
-        );
+        printValues(resultado);
         setMessage(null);
         setResults(resultado);
       } else {
