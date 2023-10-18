@@ -9,7 +9,7 @@ import brandsJson from "./assets/data/brands.json";
 import districtsJson from "./assets/data/districts.json";
 import citiesJson from "./assets/data/cities.json";
 
-import { alpha } from "./helpers";
+import { alpha, formatNumber } from "./helpers";
 import "./App.css";
 
 const initialSelection = {
@@ -19,12 +19,23 @@ const initialSelection = {
   cities: "",
 };
 
+const geolocationOptions = {
+  enableHighAccuracy: true,
+  maximumAge: 30000,
+  timeout: 27000,
+};
+
 function App() {
   const [fuelTypes, setFuelTypes] = useState([]);
   const [brands, setBrands] = useState([]);
   const [districts, setDistricts] = useState([]);
   const [cities, setCities] = useState([]);
   const [currentSelection, setCurrentSelection] = useState(initialSelection);
+
+  const [currentLocation, setCurrentLocation] = useState({
+    lat: null,
+    lng: null,
+  });
 
   const [results, setResults] = useState([]);
   const [message, setMessage] = useState("");
@@ -33,6 +44,15 @@ function App() {
     setFuelTypes(fuelTypesJson);
     setBrands(brandsJson);
     setDistricts(districtsJson);
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        ({ coords: { latitude, longitude } }) => {
+          setCurrentLocation({ lat: latitude, lng: longitude });
+        },
+        undefined,
+        geolocationOptions
+      );
+    }
   }, []);
 
   const selectItem = ({ target: { name, value } }) => {
@@ -51,15 +71,28 @@ function App() {
     }
   };
 
+  const getMedian = (items) => {
+    const total = items.reduce((accumulator, object) => {
+      return accumulator + object.price;
+    }, 0);
+    return formatNumber(total / items.length);
+  };
+
   const makeQuery = () => {
     const url = `/PesquisarPostos?idsTiposComb=${currentSelection.fuelTypes}&idMarca=${currentSelection.brands}&idTipoPosto=&idDistrito=${currentSelection.districts}&idsMunicipios=${currentSelection.cities}&qtdPorPagina=5000`;
-    axios.get(url).then(({ data }) => {
-      if (data.status) {
-        data.resultado.forEach((item) => {
-          item.Preco =
-            parseFloat(item.Preco.replace(" €", "").replace(",", ".")).toFixed(
-              2
-            ) + " €";
+    axios.get(url).then(({ data: { resultado, status, mensagem } }) => {
+      if (status) {
+        resultado.forEach((item) => {
+          const preco = formatNumber(
+            parseFloat(item.Preco.replace(" €", "").replace(",", "."))
+          );
+          item.price = preco;
+          item.Preco = preco + " €";
+          if (item.Latitude < 37) {
+            const lat = item.Latitude;
+            item.Latitude = item.Longitude;
+            item.Longitude = lat;
+          }
           // if (item.Marca === "GALP") {
           //   item.Preco =
           //     (
@@ -67,16 +100,28 @@ function App() {
           //     ).toFixed(2) + " €";
           // }
         });
-        const uniqueResults = data.resultado.reduce((accumulator, current) => {
-          if (!accumulator.find((item) => item.Id === current.Id)) {
-            accumulator.push(current);
-          }
-          return accumulator;
-        }, []);
+        console.log("***");
+        const groups = resultado.reduce((groups, item) => {
+          const group = groups[item.Municipio] || [];
+          group.push(item);
+          groups[item.Municipio] = group;
+          return groups;
+        }, {});
+
+        let totalMedian = 0;
+        for (const city in groups) {
+          const cityMedian = getMedian(groups[city]);
+          totalMedian += cityMedian;
+          console.log(city, cityMedian, groups[city][0].Distrito);
+        }
+        console.log(
+          "media total: ",
+          formatNumber(totalMedian / Object.keys(groups).length)
+        );
         setMessage(null);
-        setResults(uniqueResults);
+        setResults(resultado);
       } else {
-        setMessage(data.mensagem);
+        setMessage(mensagem);
         setResults([]);
       }
     });
@@ -113,7 +158,11 @@ function App() {
       </section>
 
       <section>
-        {results.length > 0 ? <Map items={results} /> : <p>{message}</p>}
+        {results.length > 0 ? (
+          <Map items={results} currentLocation={currentLocation} />
+        ) : (
+          <p>{message}</p>
+        )}
       </section>
     </div>
   );

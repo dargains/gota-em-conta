@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useCallback, memo } from "react";
 import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 import MapItem from "./MapItem";
+import CurrentLocation from "./CurrentLocation";
 import { getColor } from "../helpers";
 
-function Map({ items }) {
+function Map({ items, currentLocation }) {
   const [map, setMap] = useState(null);
+
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY,
   });
@@ -59,6 +61,9 @@ function Map({ items }) {
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
+      {currentLocation ? (
+        <CurrentLocation lat={currentLocation.lat} lng={currentLocation.lng} />
+      ) : null}
       {renderMarkers()}
     </GoogleMap>
   ) : (
