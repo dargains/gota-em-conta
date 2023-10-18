@@ -11,6 +11,15 @@ import citiesJson from "./assets/data/cities.json";
 
 import { alpha, formatNumber, getMedian } from "./helpers";
 import "./App.css";
+import {
+  Selection,
+  Brand,
+  Fueltype,
+  District,
+  City,
+  ResultItem,
+  Coordinates,
+} from "./Types";
 
 const INITIAL_SELECTION = {
   fuelTypes: "3201",
@@ -26,18 +35,19 @@ const GEOLOCATION_OPTIONS = {
 };
 
 function App() {
-  const [fuelTypes, setFuelTypes] = useState([]);
-  const [brands, setBrands] = useState([]);
-  const [districts, setDistricts] = useState([]);
-  const [cities, setCities] = useState([]);
-  const [currentSelection, setCurrentSelection] = useState(INITIAL_SELECTION);
+  const [fuelTypes, setFuelTypes] = useState<Fueltype[]>([]);
+  const [brands, setBrands] = useState<Brand[]>([]);
+  const [districts, setDistricts] = useState<District[]>([]);
+  const [cities, setCities] = useState<City[]>([]);
 
-  const [currentLocation, setCurrentLocation] = useState({
-    lat: null,
-    lng: null,
-  });
+  const [currentSelection, setCurrentSelection] =
+    useState<Selection>(INITIAL_SELECTION);
 
-  const [results, setResults] = useState([]);
+  const [currentLocation, setCurrentLocation] = useState<Coordinates | null>(
+    null
+  );
+
+  const [results, setResults] = useState<ResultItem[]>([]);
   const [message, setMessage] = useState("");
 
   useEffect(() => {
@@ -46,7 +56,11 @@ function App() {
     setDistricts(districtsJson);
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(
-        ({ coords: { latitude, longitude } }) => {
+        ({
+          coords: { latitude, longitude },
+        }: {
+          coords: { latitude: number; longitude: number };
+        }) => {
           setCurrentLocation({ lat: latitude, lng: longitude });
         },
         undefined,
@@ -71,7 +85,7 @@ function App() {
     }
   };
 
-  const printValues = (resultado) => {
+  const printValues = (resultado: ResultItem[]) => {
     console.log("***");
     const groups = resultado.reduce((groups, item) => {
       const group = groups[item.Municipio] || [];
@@ -92,7 +106,7 @@ function App() {
     );
   };
 
-  const setDiscount = (item, brand, discount) => {
+  const setDiscount = (item: ResultItem, brand: string, discount: number) => {
     if (item.Marca === brand) {
       item.Preco =
         (
@@ -102,32 +116,41 @@ function App() {
   };
 
   const makeQuery = () => {
-    const url = `/PesquisarPostos?idsTiposComb=${currentSelection.fuelTypes}&idMarca=${currentSelection.brands}&idTipoPosto=&idDistrito=${currentSelection.districts}&idsMunicipios=${currentSelection.cities}&qtdPorPagina=5000`;
-    axios.get(url).then(({ data: { resultado, status, mensagem } }) => {
-      if (status) {
-        resultado.forEach((item) => {
-          const preco = formatNumber(
-            parseFloat(item.Preco.replace(" €", "").replace(",", "."))
-          );
-          item.price = preco;
-          item.Preco = preco + " €";
+    const { fuelTypes, brands, districts, cities } = currentSelection;
+    const url = `/PesquisarPostos?idsTiposComb=${fuelTypes}&idMarca=${brands}&idTipoPosto=&idDistrito=${districts}&idsMunicipios=${cities}&qtdPorPagina=5000`;
+    axios
+      .get(url)
+      .then(
+        ({
+          data: { resultado, status, mensagem },
+        }: {
+          data: { resultado: ResultItem[]; status: number; mensagem: string };
+        }) => {
+          if (status) {
+            resultado.forEach((item: ResultItem) => {
+              const preco = formatNumber(
+                parseFloat(item.Preco.replace(" €", "").replace(",", "."))
+              );
+              item.price = preco;
+              item.Preco = preco + " €";
 
-          // fixing inverted coordinates
-          if (item.Latitude < 37) {
-            const lat = item.Latitude;
-            item.Latitude = item.Longitude;
-            item.Longitude = lat;
+              // fixing inverted coordinates
+              if (item.Latitude < 37) {
+                const lat = item.Latitude;
+                item.Latitude = item.Longitude;
+                item.Longitude = lat;
+              }
+              setDiscount(item, "GALP", 0.15);
+            });
+            printValues(resultado);
+            setMessage("");
+            setResults(resultado);
+          } else {
+            setMessage(mensagem);
+            setResults([]);
           }
-          setDiscount(item, "GALP", 0.15);
-        });
-        printValues(resultado);
-        setMessage(null);
-        setResults(resultado);
-      } else {
-        setMessage(mensagem);
-        setResults([]);
-      }
-    });
+        }
+      );
   };
 
   return (
