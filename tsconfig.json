@@ -1,0 +1,10 @@
+{
+  "include": ["src/**/*.json"],
+  "compilerOptions": {
+    "jsx": "react",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true
+  }
+}

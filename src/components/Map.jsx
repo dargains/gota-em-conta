@@ -4,12 +4,12 @@ import MapItem from "./MapItem";
 import CurrentLocation from "./CurrentLocation";
 import { getColor } from "../helpers";
 
+const googleMapsApiKey = process.env.REACT_APP_MAPS_API_KEY;
+
 function Map({ items, currentLocation }) {
   const [map, setMap] = useState(null);
 
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY,
-  });
+  const { isLoaded } = useLoadScript({ googleMapsApiKey });
 
   const onLoad = useCallback(function callback(map) {
     const bounds = new window.google.maps.LatLngBounds();

@@ -1,6 +1,22 @@
 import React from "react";
 
-const SelectItem = ({ label, id, items, onSelect }) => {
+interface ItemProps {
+  Descritivo: string;
+  Id: number;
+}
+
+interface SelectItemProps {
+  label: string;
+  id: string;
+  items: ItemProps[];
+  onSelect: ({
+    target: { name, value },
+  }: {
+    target: { name: any; value: any };
+  }) => void;
+}
+
+const SelectItem = ({ label, id, items, onSelect }: SelectItemProps) => {
   return (
     <div>
       <label htmlFor={id}>{label}</label>

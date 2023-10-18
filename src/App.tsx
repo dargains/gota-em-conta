@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import Map from "./components/Map";
@@ -12,14 +12,14 @@ import citiesJson from "./assets/data/cities.json";
 import { alpha, formatNumber, getMedian } from "./helpers";
 import "./App.css";
 
-const initialSelection = {
+const INITIAL_SELECTION = {
   fuelTypes: "3201",
   brands: "",
   districts: "",
   cities: "",
 };
 
-const geolocationOptions = {
+const GEOLOCATION_OPTIONS = {
   enableHighAccuracy: true,
   maximumAge: 30000,
   timeout: 27000,
@@ -30,7 +30,7 @@ function App() {
   const [brands, setBrands] = useState([]);
   const [districts, setDistricts] = useState([]);
   const [cities, setCities] = useState([]);
-  const [currentSelection, setCurrentSelection] = useState(initialSelection);
+  const [currentSelection, setCurrentSelection] = useState(INITIAL_SELECTION);
 
   const [currentLocation, setCurrentLocation] = useState({
     lat: null,
@@ -50,7 +50,7 @@ function App() {
           setCurrentLocation({ lat: latitude, lng: longitude });
         },
         undefined,
-        geolocationOptions
+        GEOLOCATION_OPTIONS
       );
     }
   }, []);
