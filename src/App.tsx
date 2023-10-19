@@ -4,7 +4,7 @@ import axios from "axios";
 import Map from "./components/Map";
 import SelectItem from "./components/SelectItem";
 
-import fuelTypesJson from "./assets/data/fuelTypes.json";
+import fuelTypeJson from "./assets/data/fuelTypes.json";
 import brandsJson from "./assets/data/brands.json";
 import districtsJson from "./assets/data/districts.json";
 import citiesJson from "./assets/data/cities.json";
@@ -22,7 +22,7 @@ import {
 } from "./Types";
 
 const INITIAL_SELECTION = {
-  fuelTypes: "3201",
+  fuelType: "3201",
   brands: "",
   districts: "",
   cities: "",
@@ -35,7 +35,7 @@ const GEOLOCATION_OPTIONS = {
 };
 
 function App() {
-  const [fuelTypes, setFuelTypes] = useState<Fueltype[]>([]);
+  const [fuelType, setFuelType] = useState<Fueltype[]>([]);
   const [brands, setBrands] = useState<Brand[]>([]);
   const [districts, setDistricts] = useState<District[]>([]);
   const [cities, setCities] = useState<City[]>([]);
@@ -51,7 +51,7 @@ function App() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    setFuelTypes(fuelTypesJson);
+    setFuelType(fuelTypeJson);
     setBrands(brandsJson);
     setDistricts(districtsJson);
     if ("geolocation" in navigator) {
@@ -123,8 +123,8 @@ function App() {
   };
 
   const makeQuery = async () => {
-    const { fuelTypes, brands, districts, cities } = currentSelection;
-    const url = `/PesquisarPostos?idsTiposComb=${fuelTypes}&idMarca=${brands}&idTipoPosto=&idDistrito=${districts}&idsMunicipios=${cities}&qtdPorPagina=5000`;
+    const { fuelType, brands, districts, cities } = currentSelection;
+    const url = `/PesquisarPostos?idsTiposComb=${fuelType}&idMarca=${brands}&idTipoPosto=&idDistrito=${districts}&idsMunicipios=${cities}&qtdPorPagina=5000`;
     const { data } = await axios.get(url);
     const {
       resultado,
@@ -134,11 +134,11 @@ function App() {
     if (status) {
       resultado.forEach((item: ResultItem) => {
         // setting price with only two decimals
-        const preco = formatNumber(
+        const priceFloat = formatNumber(
           parseFloat(item.Preco.replace(" €", "").replace(",", "."))
         );
-        item.price = preco;
-        item.Preco = preco + " €";
+        item.price = priceFloat;
+        item.Preco = priceFloat + " €";
 
         // fixing inverted coordinates
         if (item.Latitude < 37) {
@@ -162,8 +162,8 @@ function App() {
       <section>
         <SelectItem
           label="Tipo de Combustível"
-          id="fuelTypes"
-          items={fuelTypes}
+          id="fuelType"
+          items={fuelType}
           onSelect={selectItem}
         />
         <SelectItem
@@ -171,6 +171,7 @@ function App() {
           id="brands"
           items={brands}
           onSelect={selectItem}
+          multiple
         />
         <SelectItem
           label="Distrito"

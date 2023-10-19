@@ -15,12 +15,10 @@ export interface ResultItem {
   Quantidade: 26;
   TipoPosto: string;
   price?: number;
-  lat?: number;
-  lng?: number;
 }
 
 export interface Selection {
-  fuelTypes: string;
+  fuelType: string;
   brands: string;
   districts: string;
   cities: string;
