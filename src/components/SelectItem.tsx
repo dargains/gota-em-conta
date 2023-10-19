@@ -9,18 +9,21 @@ interface SelectItemProps {
   label: string;
   id: string;
   items: ItemProps[];
-  onSelect: ({
-    target: { name, value },
-  }: {
-    target: { name: string; value: string };
-  }) => void;
+  multiple?: boolean;
+  onSelect: ({ target }: { target: HTMLSelectElement }) => void;
 }
 
-const SelectItem = ({ label, id, items, onSelect }: SelectItemProps) => {
+const SelectItem = ({
+  label,
+  id,
+  items,
+  multiple,
+  onSelect,
+}: SelectItemProps) => {
   return (
     <div>
       <label htmlFor={id}>{label}</label>
-      <select name={id} id={id} onChange={onSelect}>
+      <select name={id} id={id} onChange={onSelect} multiple={multiple}>
         <option value="">Qualquer um</option>
         {items.map((item) => (
           <option key={item.Id} value={item.Id}>
