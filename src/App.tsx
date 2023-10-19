@@ -69,7 +69,14 @@ function App() {
     }
   }, []);
 
-  const selectItem = ({ target: { name, value } }) => {
+  const selectItem = ({ target }: { target: HTMLSelectElement }) => {
+    const { name } = target;
+    const value = target.hasAttribute("multiple")
+      ? Array.from(
+          target.selectedOptions,
+          (option: HTMLOptionElement) => option.value
+        )
+      : target.value;
     const isDistrict = name === "districts";
     setCurrentSelection({
       ...currentSelection,
@@ -77,7 +84,7 @@ function App() {
       ...(isDistrict && { cities: "" }),
     });
 
-    if (isDistrict) {
+    if (isDistrict && typeof value === "string") {
       const districtCities = citiesJson
         .filter((city) => city.IdDistrito === parseInt(value))
         .sort(alpha);
@@ -176,6 +183,7 @@ function App() {
           id="cities"
           items={cities}
           onSelect={selectItem}
+          multiple
         />
         <button onClick={makeQuery}>procurar</button>
       </section>
