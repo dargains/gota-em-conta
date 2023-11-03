@@ -146,7 +146,7 @@ function App() {
           item.Latitude = item.Longitude;
           item.Longitude = lat;
         }
-        setDiscount(item, "GALP", 0.15);
+        //setDiscount(item, "GALP", 0.15);
       });
       printValues(resultado);
       setMessage("");
