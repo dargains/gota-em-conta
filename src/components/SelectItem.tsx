@@ -23,32 +23,25 @@ const SelectItem = ({
   isMultiple,
   isDisabled,
 }: SelectItemProps) => {
-  const options = items.map(item => {return {value: item.Id, label: item.Descritivo}});
-  
   const handleSelect = (item) => {
     onSelect(item, id);
   };
 
   return (
     <Select
-    style={{ width: '100%' }}
-    placeholder="Qualquer um"
-    onChange={handleSelect}
-    options={options}
-    {...(isMultiple && {mode: "multiple"})}
-    disabled={isDisabled}
-    />
-    // <div>
-    //   <label htmlFor={id}>{label}</label>
-    //   <select name={id} id={id} onChange={onSelect} isMultiple={isMultiple}>
-    //     <option value="">Qualquer um</option>
-    //     {items.map((item) => (
-    //       <option key={item.Id} value={item.Id}>
-    //         {item.Descritivo}
-    //       </option>
-    //     ))}
-    //   </select>
-    // </div>
+      style={{ width: '100%' }}
+      placeholder="Qualquer um"
+      onChange={handleSelect}
+      allowClear
+      disabled={isDisabled}
+      {...(isMultiple && {mode: "multiple"})}
+    >
+      {items.map((item) => (
+          <Select.Option key={item.Id} value={item.Id}>
+            {item.Descritivo}
+          </Select.Option>
+        ))}
+      </Select>
   );
 };
 
