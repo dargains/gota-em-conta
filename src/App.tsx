@@ -20,6 +20,7 @@ import {
   ResultItem,
   Coordinates,
 } from "./Types";
+import { Button } from "antd";
 
 const INITIAL_SELECTION = {
   fuelType: "3201",
@@ -69,24 +70,17 @@ function App() {
     }
   }, []);
 
-  const selectItem = ({ target }: { target: HTMLSelectElement }) => {
-    const { name } = target;
-    const value = target.hasAttribute("multiple")
-      ? Array.from(
-          target.selectedOptions,
-          (option: HTMLOptionElement) => option.value
-        )
-      : target.value;
+  const selectItem = (value: number, name: string) => {
     const isDistrict = name === "districts";
     setCurrentSelection({
       ...currentSelection,
       [name]: value,
       ...(isDistrict && { cities: "" }),
     });
-
-    if (isDistrict && typeof value === "string") {
+    
+    if (isDistrict) {
       const districtCities = citiesJson
-        .filter((city) => city.IdDistrito === parseInt(value))
+        .filter((city) => city.IdDistrito === value)
         .sort(alpha);
       setCities(districtCities);
     }
@@ -171,7 +165,6 @@ function App() {
           id="brands"
           items={brands}
           onSelect={selectItem}
-          multiple
         />
         <SelectItem
           label="Distrito"
@@ -184,11 +177,12 @@ function App() {
           id="cities"
           items={cities}
           onSelect={selectItem}
-          multiple
+          isMultiple
+          isDisabled={!currentSelection.districts}
         />
-        <button onClick={makeQuery}>procurar</button>
+        <Button type="primary" onClick={makeQuery}>Procurar</Button>
       </section>
-
+      
       <section>
         {results.length > 0 ? (
           <Map items={results} currentLocation={currentLocation} />
