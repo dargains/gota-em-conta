@@ -10,7 +10,7 @@ interface SelectItemProps {
   label: string;
   id: string;
   items: ItemProps[];
-  onSelect: (value: number, name: string) => void;
+  onSelect: (value: string, name: string) => void;
   isMultiple?: boolean;
   isDisabled?: boolean;
 }
@@ -23,9 +23,14 @@ const SelectItem = ({
   isMultiple,
   isDisabled,
 }: SelectItemProps) => {
+  const options = items.map(item => {return {value: item.Id.toString(), label: item.Descritivo}});
+  
   const handleSelect = (item) => {
     onSelect(item, id);
   };
+
+  const filterOption = (input: string, option?: { label: string; value: string }) =>
+  (option?.label ?? '').toLowerCase().includes(input.toLowerCase());
 
   return (
     <Select
@@ -33,14 +38,17 @@ const SelectItem = ({
       placeholder="Qualquer um"
       onChange={handleSelect}
       allowClear
+      showSearch
+      options={options}
+      filterOption={filterOption}
       disabled={isDisabled}
       {...(isMultiple && {mode: "multiple"})}
     >
-      {items.map((item) => (
+      {/* {items.map((item) => (
           <Select.Option key={item.Id} value={item.Id}>
             {item.Descritivo}
           </Select.Option>
-        ))}
+        ))} */}
       </Select>
   );
 };

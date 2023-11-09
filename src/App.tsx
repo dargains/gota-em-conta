@@ -20,7 +20,7 @@ import {
   ResultItem,
   Coordinates,
 } from "./Types";
-import { Button } from "antd";
+import { Button, Space } from "antd";
 
 const INITIAL_SELECTION = {
   fuelType: "3201",
@@ -70,7 +70,7 @@ function App() {
     }
   }, []);
 
-  const selectItem = (value: number, name: string) => {
+  const selectItem = (value: string, name: string) => {
     const isDistrict = name === "districts";
     setCurrentSelection({
       ...currentSelection,
@@ -80,7 +80,7 @@ function App() {
     
     if (isDistrict) {
       const districtCities = citiesJson
-        .filter((city) => city.IdDistrito === value)
+        .filter((city) => city.IdDistrito === parseInt(value))
         .sort(alpha);
       setCities(districtCities);
     }
@@ -153,7 +153,7 @@ function App() {
 
   return (
     <div className="App">
-      <section>
+      <Space direction="vertical" size="middle" style={{ display: 'flex' }}>
         <SelectItem
           label="Tipo de Combustível"
           id="fuelType"
@@ -181,7 +181,7 @@ function App() {
           isDisabled={!currentSelection.districts}
         />
         <Button type="primary" onClick={makeQuery}>Procurar</Button>
-      </section>
+      </Space>
       
       <section>
         {results.length > 0 ? (
