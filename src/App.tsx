@@ -20,7 +20,7 @@ import {
   ResultItem,
   Coordinates,
 } from "./Types";
-import { Button, Space } from "antd";
+import { Button, Space, Typography } from "antd";
 
 const INITIAL_SELECTION = {
   fuelType: "3201",
@@ -152,8 +152,9 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Space direction="vertical" size="middle" style={{ display: 'flex' }}>
+    <>
+      <Space direction="vertical" size="middle" style={{ display: 'flex', padding: "0 24px 24px 24px" }}>
+        <Typography.Title>Gota em Conta</Typography.Title>
         <SelectItem
           label="Tipo de Combustível"
           id="fuelType"
@@ -190,7 +191,7 @@ function App() {
           <p>{message}</p>
         )}
       </section>
-    </div>
+    </>
   );
 }
 
