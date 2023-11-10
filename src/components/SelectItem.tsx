@@ -1,4 +1,4 @@
-import { Select } from "antd";
+import { Select, Typography } from "antd";
 import React from "react";
 
 interface ItemProps {
@@ -33,6 +33,8 @@ const SelectItem = ({
   (option?.label ?? '').toLowerCase().includes(input.toLowerCase());
 
   return (
+    <>
+    <Typography.Text>{label}</Typography.Text>
     <Select
       style={{ width: '100%' }}
       placeholder="Qualquer um"
@@ -43,13 +45,8 @@ const SelectItem = ({
       filterOption={filterOption}
       disabled={isDisabled}
       {...(isMultiple && {mode: "multiple"})}
-    >
-      {/* {items.map((item) => (
-          <Select.Option key={item.Id} value={item.Id}>
-            {item.Descritivo}
-          </Select.Option>
-        ))} */}
-      </Select>
+    />
+    </>
   );
 };
 
