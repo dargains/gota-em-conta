@@ -153,7 +153,7 @@ function App() {
 
   return (
     <>
-      <Space direction="vertical" size="middle" style={{ display: 'flex', padding: "0 24px 24px 24px" }}>
+      <Space direction="vertical" size="middle" style={{ display: 'flex', padding: "0 24px 24px 24px", maxWidth: '800px', margin: '0 auto' }}>
         <Typography.Title>Gota em Conta</Typography.Title>
         <SelectItem
           label="Tipo de Combustível"
