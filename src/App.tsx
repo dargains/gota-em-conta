@@ -142,7 +142,7 @@ function App() {
         }
 
         //fix wrong lng
-        if (item.Longitude < 0) {
+        if (item.Longitude > 0) {
           item.Longitude = -1 * item.Longitude;
         }
         //setDiscount(item, "GALP", 0.15);
