@@ -77,7 +77,7 @@ function App() {
       [name]: value,
       ...(isDistrict && { cities: "" }),
     });
-    
+
     if (isDistrict) {
       const districtCities = citiesJson
         .filter((city) => city.IdDistrito === parseInt(value))
@@ -134,11 +134,16 @@ function App() {
         item.price = priceFloat;
         item.Preco = priceFloat + " €";
 
-        // fixing inverted coordinates
+        // fixing wrong lat coordinates
         if (item.Latitude < 37) {
           const lat = item.Latitude;
           item.Latitude = item.Longitude;
           item.Longitude = lat;
+        }
+
+        //fix wrong lng
+        if (item.Longitude < 0) {
+          item.Longitude = -1 * item.Longitude;
         }
         //setDiscount(item, "GALP", 0.15);
       });
@@ -153,7 +158,16 @@ function App() {
 
   return (
     <>
-      <Space direction="vertical" size="middle" style={{ display: 'flex', padding: "0 24px 24px 24px", maxWidth: '800px', margin: '0 auto' }}>
+      <Space
+        direction="vertical"
+        size="middle"
+        style={{
+          display: "flex",
+          padding: "0 24px 24px 24px",
+          maxWidth: "800px",
+          margin: "0 auto",
+        }}
+      >
         <Typography.Title>Gota em Conta</Typography.Title>
         <SelectItem
           label="Tipo de Combustível"
@@ -181,9 +195,11 @@ function App() {
           isMultiple
           isDisabled={!currentSelection.districts}
         />
-        <Button type="primary" onClick={makeQuery}>Procurar</Button>
+        <Button type="primary" onClick={makeQuery}>
+          Procurar
+        </Button>
       </Space>
-      
+
       <section>
         {results.length > 0 ? (
           <Map items={results} currentLocation={currentLocation} />
