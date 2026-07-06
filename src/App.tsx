@@ -91,23 +91,23 @@ function App() {
 
   const printValues = (resultado: ResultItem[]) => {
     console.log("***");
-    const groups = resultado.reduce((groups, item) => {
-      const group = groups[item.Municipio] || [];
-      group.push(item);
-      groups[item.Municipio] = group;
-      return groups;
-    }, {});
-
-    let totalMedian = 0;
-    for (const city in groups) {
-      const cityMedian = getMedian(groups[city]);
-      totalMedian += cityMedian;
-      console.log(city, cityMedian, groups[city][0].Distrito);
-    }
-    console.log(
-      "media total: ",
-      formatNumber(totalMedian / Object.keys(groups).length)
+    const groups = resultado.reduce<Record<string, ResultItem[]>>(
+      (groupedItems, item) => {
+        const group = groupedItems[item.Municipio] ?? [];
+        group.push(item);
+        groupedItems[item.Municipio] = group;
+        return groupedItems;
+      },
+      {}
     );
+
+    const totalMedian = Object.entries(groups).reduce((sum, [city, cityItems]) => {
+      const cityMedian = getMedian(cityItems);
+      console.log(city, cityMedian, cityItems[0].Distrito);
+      return sum + cityMedian;
+    }, 0);
+
+    console.log("media total: ", formatNumber(totalMedian / Object.keys(groups).length));
   };
 
   const makeQuery = async () => {
