@@ -46,13 +46,14 @@ function Map({ items, currentLocation, radiusKm }) {
   }, []);
 
   const renderMarkers = () =>
-    items.map(({ Id, Latitude, Longitude, Preco }, index) => (
+    items.map(({ Id, Latitude, Longitude, Preco, Nome }, index) => (
       <MapItem
         key={Id}
         lat={Latitude}
         lng={Longitude}
         text={Preco}
         color={getColor(index / items.length)}
+        stationName={Nome}
       />
     ));
 
