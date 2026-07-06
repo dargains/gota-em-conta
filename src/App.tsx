@@ -52,6 +52,7 @@ function App() {
 
   const [results, setResults] = useState<ResultItem[]>([]);
   const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     setFuelType(fuelTypeJson);
@@ -74,11 +75,11 @@ function App() {
 
   const selectItem = (value: string, name: string) => {
     const isDistrict = name === "districts";
-    setCurrentSelection({
-      ...currentSelection,
+    setCurrentSelection((previousSelection) => ({
+      ...previousSelection,
       [name]: value,
       ...(isDistrict && { cities: "" }),
-    });
+    }));
 
     if (isDistrict) {
       const districtCities = citiesJson
@@ -109,52 +110,58 @@ function App() {
     );
   };
 
-  const setDiscount = (item: ResultItem, brand: string, discount: number) => {
-    if (item.Marca === brand) {
-      item.Preco =
-        (
-          parseFloat(item.Preco.replace(" €", "").replace(",", ".")) - discount
-        ).toFixed(2) + " €";
-    }
-  };
-
   const makeQuery = async () => {
     const { fuelType, brands, districts, cities } = currentSelection;
     const url = `/PesquisarPostos?idsTiposComb=${fuelType}&idMarca=${brands}&idTipoPosto=&idDistrito=${districts}&idsMunicipios=${cities}&qtdPorPagina=5000`;
-    const { data } = await axios.get(url);
-    const {
-      resultado,
-      status,
-      mensagem,
-    }: { resultado: ResultItem[]; status: boolean; mensagem: string } = data;
-    if (status) {
-      resultado.forEach((item: ResultItem) => {
-        // setting price with only two decimals
-        const priceFloat = formatNumber(
-          parseFloat(item.Preco.replace(" €", "").replace(",", "."))
-        );
-        item.price = priceFloat;
-        item.Preco = priceFloat + " €";
 
-        // fixing wrong lat coordinates
-        if (item.Latitude < 37) {
-          const lat = item.Latitude;
-          item.Latitude = item.Longitude;
-          item.Longitude = lat;
-        }
+    setIsLoading(true);
+    setMessage("");
 
-        //fix wrong lng
-        if (item.Longitude > 0) {
-          item.Longitude = -1 * item.Longitude;
-        }
-        //setDiscount(item, "GALP", 0.15);
-      });
-      printValues(resultado);
-      setMessage("");
-      setResults(resultado);
-    } else {
-      setMessage(mensagem);
+    try {
+      const { data } = await axios.get(url);
+      const {
+        resultado,
+        status,
+        mensagem,
+      }: { resultado: ResultItem[]; status: boolean; mensagem: string } = data;
+
+      if (status) {
+        const normalizedResults = resultado.map((item: ResultItem) => {
+          const priceFloat = formatNumber(
+            parseFloat(item.Preco.replace(" €", "").replace(",", "."))
+          );
+
+          const normalizedItem = {
+            ...item,
+            price: priceFloat,
+            Preco: priceFloat + " €",
+          };
+
+          if (normalizedItem.Latitude < 37) {
+            const lat = normalizedItem.Latitude;
+            normalizedItem.Latitude = normalizedItem.Longitude;
+            normalizedItem.Longitude = lat;
+          }
+
+          if (normalizedItem.Longitude > 0) {
+            normalizedItem.Longitude = -1 * normalizedItem.Longitude;
+          }
+
+          return normalizedItem;
+        });
+
+        printValues(normalizedResults);
+        setResults(normalizedResults);
+      } else {
+        setResults([]);
+        setMessage(mensagem || "Nenhum posto encontrado para esta pesquisa.");
+      }
+    } catch (error) {
+      console.error("Failed to fetch fuel stations", error);
       setResults([]);
+      setMessage("Não foi possível carregar os postos. Tente novamente.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -231,14 +238,16 @@ function App() {
       </Space>
 
       <section>
-        {results.length > 0 ? (
+        {isLoading ? (
+          <p>A procurar postos...</p>
+        ) : results.length > 0 ? (
           visibleResults.length > 0 ? (
             <Map items={visibleResults} currentLocation={currentLocation} radiusKm={radiusKm} />
           ) : (
             <p>Nenhum posto encontrado dentro de {radiusKm} km da sua localização.</p>
           )
         ) : (
-          <p>{message}</p>
+          <p>{message || "Ainda não há resultados para mostrar."}</p>
         )}
       </section>
     </>

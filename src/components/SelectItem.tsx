@@ -23,29 +23,32 @@ const SelectItem = ({
   isMultiple,
   isDisabled,
 }: SelectItemProps) => {
-  const options = items.map(item => {return {value: item.Id.toString(), label: item.Descritivo}});
-  
-  const handleSelect = (item) => {
+  const options = items.map((item) => ({
+    value: item.Id.toString(),
+    label: item.Descritivo,
+  }));
+
+  const handleSelect = (item: string) => {
     onSelect(item, id);
   };
 
-  const filterOption = (input: string, option?: { label: string; value: string }) =>
-  (option?.label ?? '').toLowerCase().includes(input.toLowerCase());
+  const filterOption = (input: string, option?: { label?: string; value?: string }) =>
+    (option?.label ?? "").toLowerCase().includes(input.toLowerCase());
 
   return (
     <>
-    <Typography.Text>{label}</Typography.Text>
-    <Select
-      style={{ width: '100%' }}
-      placeholder="Qualquer um"
-      onChange={handleSelect}
-      allowClear
-      showSearch
-      options={options}
-      filterOption={filterOption}
-      disabled={isDisabled}
-      {...(isMultiple && {mode: "multiple"})}
-    />
+      <Typography.Text>{label}</Typography.Text>
+      <Select
+        style={{ width: '100%' }}
+        placeholder="Qualquer um"
+        onChange={handleSelect}
+        allowClear
+        showSearch
+        options={options}
+        filterOption={filterOption}
+        disabled={isDisabled}
+        {...(isMultiple && { mode: "multiple" })}
+      />
     </>
   );
 };
