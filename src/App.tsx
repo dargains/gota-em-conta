@@ -9,7 +9,7 @@ import brandsJson from "./assets/data/brands.json";
 import districtsJson from "./assets/data/districts.json";
 import citiesJson from "./assets/data/cities.json";
 
-import { alpha, formatNumber, getMedian } from "./helpers";
+import { alpha, filterStationsByRadius, formatNumber, getMedian } from "./helpers";
 import "./App.css";
 import {
   Selection,
@@ -20,7 +20,7 @@ import {
   ResultItem,
   Coordinates,
 } from "./Types";
-import { Button, Space, Typography } from "antd";
+import { Button, Slider, Space, Switch, Typography } from "antd";
 
 const INITIAL_SELECTION = {
   fuelType: "3201",
@@ -47,6 +47,8 @@ function App() {
   const [currentLocation, setCurrentLocation] = useState<Coordinates | null>(
     null
   );
+  const [radiusKm, setRadiusKm] = useState(10);
+  const [showAllResults, setShowAllResults] = useState(false);
 
   const [results, setResults] = useState<ResultItem[]>([]);
   const [message, setMessage] = useState("");
@@ -156,6 +158,11 @@ function App() {
     }
   };
 
+  const shouldFilterByRadius = Boolean(currentLocation && !showAllResults);
+  const visibleResults = shouldFilterByRadius
+    ? filterStationsByRadius(results, currentLocation, radiusKm)
+    : results;
+
   return (
     <>
       <Space
@@ -195,14 +202,41 @@ function App() {
           isMultiple
           isDisabled={!currentSelection.districts}
         />
-        <Button type="primary" onClick={makeQuery}>
-          Procurar
-        </Button>
+        <Button type="primary" onClick={makeQuery}>Procurar</Button>
+        <Space align="center">
+          <Typography.Text>Mostrar todos</Typography.Text>
+          <Switch
+            checked={showAllResults}
+            onChange={(checked) => setShowAllResults(checked)}
+          />
+        </Space>
+        <Space direction="vertical" size="small" style={{ width: "100%" }}>
+          <Typography.Text>Raio: {radiusKm} km</Typography.Text>
+          <Slider
+            min={1}
+            max={50}
+            step={1}
+            value={radiusKm}
+            onChange={(value) => setRadiusKm(value)}
+            disabled={showAllResults}
+          />
+        </Space>
+        <Typography.Text type="secondary">
+          {currentLocation
+            ? showAllResults
+              ? "A mostrar todos os postos encontrados."
+              : `A mostrar postos a até ${radiusKm} km da sua localização atual.`
+            : "Ative a localização para filtrar postos por raio."}
+        </Typography.Text>
       </Space>
 
       <section>
         {results.length > 0 ? (
-          <Map items={results} currentLocation={currentLocation} />
+          visibleResults.length > 0 ? (
+            <Map items={visibleResults} currentLocation={currentLocation} radiusKm={radiusKm} />
+          ) : (
+            <p>Nenhum posto encontrado dentro de {radiusKm} km da sua localização.</p>
+          )
         ) : (
           <p>{message}</p>
         )}

@@ -1,30 +1,47 @@
 import React, { useState, useEffect, useCallback, memo } from "react";
-import { GoogleMap, useLoadScript } from "@react-google-maps/api";
+import { CircleF, GoogleMap, useLoadScript } from "@react-google-maps/api";
 import MapItem from "./MapItem";
 import CurrentLocation from "./CurrentLocation";
 import { getColor } from "../helpers";
 
 const googleMapsApiKey = process.env.REACT_APP_MAPS_API_KEY;
 
-function Map({ items, currentLocation }) {
+function Map({ items, currentLocation, radiusKm }) {
   const [map, setMap] = useState(null);
 
   const { isLoaded } = useLoadScript({ googleMapsApiKey });
 
-  const onLoad = useCallback(function callback(map) {
-    const bounds = new window.google.maps.LatLngBounds();
-    items.map((item) => {
-      bounds.extend({
-        lat: item.Latitude,
-        lng: item.Longitude,
+  const fitBounds = useCallback(
+    (mapInstance) => {
+      const bounds = new window.google.maps.LatLngBounds();
+
+      items.forEach((item) => {
+        bounds.extend({
+          lat: item.Latitude,
+          lng: item.Longitude,
+        });
       });
-    });
-    map.fitBounds(bounds);
 
-    setMap(map);
-  }, []);
+      if (currentLocation) {
+        bounds.extend(currentLocation);
+      }
 
-  const onUnmount = useCallback(function callback(map) {
+      if (items.length > 0 || currentLocation) {
+        mapInstance.fitBounds(bounds);
+      }
+    },
+    [currentLocation, items]
+  );
+
+  const onLoad = useCallback(
+    function callback(mapInstance) {
+      fitBounds(mapInstance);
+      setMap(mapInstance);
+    },
+    [fitBounds]
+  );
+
+  const onUnmount = useCallback(function callback() {
     setMap(null);
   }, []);
 
@@ -41,16 +58,9 @@ function Map({ items, currentLocation }) {
 
   useEffect(() => {
     if (map) {
-      const bounds = new window.google.maps.LatLngBounds();
-      items.map((item) => {
-        bounds.extend({
-          lat: item.Latitude,
-          lng: item.Longitude,
-        });
-      });
-      map.fitBounds(bounds);
+      fitBounds(map);
     }
-  }, [items]);
+  }, [fitBounds, map]);
 
   return isLoaded ? (
     <GoogleMap
@@ -62,7 +72,22 @@ function Map({ items, currentLocation }) {
       onUnmount={onUnmount}
     >
       {currentLocation ? (
-        <CurrentLocation lat={currentLocation.lat} lng={currentLocation.lng} />
+        <>
+          <CurrentLocation lat={currentLocation.lat} lng={currentLocation.lng} />
+          <CircleF
+            center={currentLocation}
+            radius={radiusKm * 1000}
+            options={{
+              strokeColor: "#2563eb",
+              strokeOpacity: 0.8,
+              strokeWeight: 2,
+              fillColor: "#2563eb",
+              fillOpacity: 0.15,
+              clickable: false,
+              editable: false,
+            }}
+          />
+        </>
       ) : null}
       {renderMarkers()}
     </GoogleMap>
